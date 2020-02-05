@@ -1,3 +1,28 @@
 {
-    "extends": "standard"
+    "extends": [
+        "react-app",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:flowtype/recommended"
+    ],
+    "plugins": ["jest", "react-hooks", "flowtype"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "flowtype": {
+            "onlyFilesWithFlowAnnotation": true
+        }
+    },
+    "env": {
+        "jest/globals": true,
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "react/prop-types": 0,
+        "react-hooks/rules-of-hooks": "error"
+    }
 }

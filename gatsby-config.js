@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Pandas Eating Lots',
-    description: 'Something about pandas and food',
-    author: 'me'
+    title: 'Phil Barber',
+    description: 'A blog about me and maybe other things',
+    author: 'phil.barber93@gmail.com'
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -34,7 +34,7 @@ module.exports = {
         icon: 'src/images/icon.png' // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet'
   ]
 }
