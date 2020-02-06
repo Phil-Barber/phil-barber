@@ -15,6 +15,11 @@ export default ({ data }) => (
       >
         Look! It's a website all about me
       </h1>
+      <p>
+        Impressive and consuing that you've ended up here. Not much to see yet. 
+        Have a good time, make good choices.
+      </p>
+      <h3>Films</h3>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
