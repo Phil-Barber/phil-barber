@@ -36,12 +36,12 @@ export default ({ children }) => {
         </h3>
       </Link>
       <Link
-        to={'/about/'}
+        to={'/contact/'}
         css={css`
           float: right;
         `}
       >
-        About
+        Contact
       </Link>
       {children}
     </div>
