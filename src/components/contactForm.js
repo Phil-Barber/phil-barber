@@ -1,12 +1,12 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-
+import { TextInput } from './formik/textInput'
 
 export const ContactForm = () => {
   const bodyLimit = 300
 
-  return <Formik 
+  return <Formik
     initialValues={{
       email: '',
       name: '',
@@ -18,6 +18,7 @@ export const ContactForm = () => {
         .required('Required'),
       name: Yup.string()
         .required('Required'),
+      company: Yup.string(),
       body: Yup.string()
         .max(bodyLimit, `Must be ${bodyLimit} characters or less`)
         .required('Required'),
@@ -30,21 +31,32 @@ export const ContactForm = () => {
     }}
   >
     <Form>
-      <label htmlFor="email">Email Address</label>
-      <Field name="email" type="email" />
-      <ErrorMessage name="email" />
-      <label htmlFor="name">Name</label>
-      <Field name="name" type="text" />
-      <ErrorMessage name="name" />
-      <label htmlFor="body">Message</label>
-      <Field name="body" as="textarea" placeholder={`Hi Phil,
+      <TextInput
+        label="Email Address"
+        name="email"
+        type="email"
+      />
+      <TextInput
+        label="Name"
+        name="name"
+        type="text"
+      />
+      <TextInput
+        label="Company"
+        name="company"
+        type="text"
+      />
+      <TextInput
+        label="Message"
+        name="body"
+        textarea
+        placeholder={`Hi Phil,
 
 Hope you're having a great day! 
 
 Listen to this really exciting project you could contribute to:
 ...`}
-          />
-      <ErrorMessage name="body" />
+      />
       <button type="submit">Submit</button>
     </Form>
   </Formik>
