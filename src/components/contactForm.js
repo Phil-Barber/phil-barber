@@ -1,18 +1,18 @@
 import React from 'react'
-import { useFormik } from 'formik'
+import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 
 export const ContactForm = () => {
   const bodyLimit = 300
 
-  const formik = useFormik({
-    initialValues: {
+  return <Formik 
+    initialValues={{
       email: '',
       name: '',
       body: '',
-    },
-    validationSchema: Yup.object({
+    }}
+    validationSchema={Yup.object({
       email: Yup.string()
         .email('Invalid email address')
         .required('Required'),
@@ -21,34 +21,33 @@ export const ContactForm = () => {
       body: Yup.string()
         .max(bodyLimit, `Must be ${bodyLimit} characters or less`)
         .required('Required'),
-    }),
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-  return (
-    <form onSubmit={formik.handleSubmit}>
+    })}
+    onSubmit={(values, { setSubmitting }) => {
+              setTimeout(() => {
+                          alert(JSON.stringify(values, null, 2));
+        setSubmitting(false);
+      }, 400);
+    }}
+  >
+    <Form>
       <label htmlFor="email">Email Address</label>
-      <input
-        name="email"
-        {...formik.getFieldProps('email')}
-      />
-      {formik.touched.email && formik.errors.email && <div>{formik.errors.email}</div>}
+      <Field name="email" type="email" />
+      <ErrorMessage name="email" />
       <label htmlFor="name">Name</label>
-      <input
-        name='name'
-        {...formik.getFieldProps('name')}
-      />
-      {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>}
-      <label htmlFor="body"></label>
-      <input
-        name='body'
-        {...formik.getFieldProps('body')}
-      />
-      {formik.touched.body && formik.errors.body && <div>{formik.errors.body}</div>}
+      <Field name="name" type="text" />
+      <ErrorMessage name="name" />
+      <label htmlFor="body">Message</label>
+      <Field name="body" as="textarea" placeholder={`Hi Phil,
+
+Hope you're having a great day! 
+
+Listen to this really exciting project you could contribute to:
+...`}
+          />
+      <ErrorMessage name="body" />
       <button type="submit">Submit</button>
-    </form>
-  );
+    </Form>
+  </Formik>
 };
 
 
