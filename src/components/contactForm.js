@@ -30,35 +30,37 @@ export const ContactForm = () => {
       }, 400);
     }}
   >
-    <Form>
-      <TextInput
-        label="Email Address"
-        name="email"
-        type="email"
-      />
-      <TextInput
-        label="Name"
-        name="name"
-        type="text"
-      />
-      <TextInput
-        label="Company"
-        name="company"
-        type="text"
-      />
-      <TextInput
-        label="Message"
-        name="body"
-        textarea
-        placeholder={`Hi Phil,
+    {formik => (
+      <Form>
+        <TextInput
+          label="Email Address"
+          name="email"
+          type="email"
+        />
+        <TextInput
+          label="Name"
+          name="name"
+          type="text"
+        />
+        <TextInput
+          label="Company"
+          name="company"
+          type="text"
+        />
+        <TextInput
+          label="Message"
+          name="body"
+          textarea
+          placeholder={`Hi Phil,
 
-Hope you're having a great day! 
+  Hope you're having a great day! 
 
-Listen to this really exciting project you could contribute to:
-...`}
-      />
-      <button type="submit">Submit</button>
-    </Form>
+  Listen to this really exciting project you could contribute to:
+  ...`}
+        />
+        <button type="submit" disabled={formik.isSubmitting}>Submit</button>
+      </Form>
+    )}
   </Formik>
 };
 
