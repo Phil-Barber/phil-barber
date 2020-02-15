@@ -30,32 +30,20 @@ export const ContactForm = () => {
     <form onSubmit={formik.handleSubmit}>
       <label htmlFor="email">Email Address</label>
       <input
-        id="email"
         name="email"
-        type="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
+        {...formik.getFieldProps('email')}
       />
       {formik.touched.email && formik.errors.email && <div>{formik.errors.email}</div>}
       <label htmlFor="name">Name</label>
       <input
-        id="name"
-        name="name"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.lastName}
+        name='name'
+        {...formik.getFieldProps('name')}
       />
       {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>}
       <label htmlFor="body"></label>
       <input
-        id="body"
-        name="body"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.lastName}
+        name='body'
+        {...formik.getFieldProps('body')}
       />
       {formik.touched.body && formik.errors.body && <div>{formik.errors.body}</div>}
       <button type="submit">Submit</button>
