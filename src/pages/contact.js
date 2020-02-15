@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { ContactForm } from '../components/contactForm'
 
 export default ({ data }) => (
   <Layout>
@@ -9,6 +10,7 @@ export default ({ data }) => (
       If you've got a social enterprise or a good cause that you would like some technical help 
       with, don't hesitate to get in touch using the form below.
     </p>
+    <ContactForm />
   </Layout>
 )
 
