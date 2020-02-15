@@ -1,19 +1,32 @@
 import React from 'react'
 import { useField } from 'formik'
+import styled from 'styled-components'
 
-export const TextInput = ({ label, textarea, ...props }) => {
+
+export const InputContainer = styled.div`
+  min-height: 84px;
+`
+
+export const Label = styled.label``
+export const Input = styled.input``
+export const Error = styled.div`
+  color: red;
+`
+
+export const TextInput = ({ label, className, textarea,...props }) => {
   const [field, meta] = useField(props);
   return (
-    <>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      { textarea 
-        ? <textarea className="textarea-input" {...field} {...props} />
-        : <input className="text-input" {...field} {...props} />
-      }
+    <InputContainer className={className} >
+      <Label htmlFor={props.id || props.name}>{label}</Label>
+      <Input
+        as={textarea ? 'textarea' : 'input'}
+        {...field} 
+        {...props} 
+      />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <Error className="error">{meta.error}</Error>
       ) : null}
-    </>
+    </InputContainer>
   );
 };
 
