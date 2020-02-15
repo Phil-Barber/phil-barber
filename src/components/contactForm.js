@@ -1,26 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik'
+import * as Yup from 'yup'
 
-const validate = (bodyLimit) => values => {
-  const errors = {};
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
-
-  if (!values.name) {
-    errors.name = 'Required';
-  }
-
-  if (!values.body) {
-    errors.body = 'Required';
-  } else if (values.body.length > bodyLimit) {
-    errors.body = `Must be ${bodyLimit} characters or less`;
-  }
-
-  return errors;
-};
 
 export const ContactForm = () => {
   const bodyLimit = 300
@@ -31,7 +12,16 @@ export const ContactForm = () => {
       name: '',
       body: '',
     },
-    validate: validate(bodyLimit),
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      name: Yup.string()
+        .required('Required'),
+      body: Yup.string()
+        .max(bodyLimit, `Must be ${bodyLimit} characters or less`)
+        .required('Required'),
+    }),
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
     },
