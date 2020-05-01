@@ -3,9 +3,11 @@ import { Link, graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import { rhythm } from '../utils/typography';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Main = ({ data }) => (
   <Layout>
+    <SEO title="Phil Barber" description="Homepage" />
     <div>
       <h1
         css={css`
@@ -19,8 +21,8 @@ const Main = ({ data }) => (
         Impressive and consuing that you&apos;ve ended up here. Not much to see
         yet. Have a good time, make good choices.
       </p>
-      <h3>Films</h3>
-      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      <h2>Films</h2>
+      <div>{data.allMarkdownRemark.totalCount} Posts</div>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link
@@ -38,7 +40,7 @@ const Main = ({ data }) => (
               {node.frontmatter.title}{' '}
               <span
                 css={css`
-                  color: #bbb;
+                  color: #667269;
                 `}
               >
                 — {node.frontmatter.date}
