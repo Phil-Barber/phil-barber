@@ -74,5 +74,6 @@ module.exports = {
         addUncaughtPages: true,
       },
     },
+    'gatsby-plugin-netlify-cms',
   ],
 };
