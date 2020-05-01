@@ -48,9 +48,9 @@ export const ContactForm = () => {
               textarea
               placeholder={`Hi Phil,
 
-    Hope you're having a great day!
+Hope you're having a great day!
 
-    Listen to this really exciting project you could contribute to:`}
+Listen to this really exciting project you could contribute to:`}
             />
             <S.FlexBox>
               <S.SubmitButton type="submit" disabled={formik.isSubmitting}>

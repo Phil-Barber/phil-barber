@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TextInput, Label, Input } from './formik/textInput';
+import { TextInput, Label, Input } from '../formik/textInput';
 
 export const TextInputStyled = styled(TextInput)`
   ${Label} {
