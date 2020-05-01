@@ -3,6 +3,7 @@ module.exports = {
     title: 'Phil Barber',
     description: 'A blog about me and maybe other things',
     author: 'phil.barber93@gmail.com',
+    siteUrl: 'https://phil-barber.uk/',
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -47,5 +48,31 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-advanced-sitemap',
+      options: {
+        query: `
+        {
+          allMarkdownRemark {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                id
+              }
+            }
+          }
+        }
+        `,
+        mapping: {
+          allMarkdownRemark: {
+            sitemap: 'posts',
+          },
+        },
+        createLinkInHead: true,
+        addUncaughtPages: true,
+      },
+    },
   ],
 };
