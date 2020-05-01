@@ -26,19 +26,22 @@ export const ContactForm = () => {
           .max(bodyLimit, `Must be ${bodyLimit} characters or less`)
           .required('Required'),
       })}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting, resetForm, setStatus }) => {
         const req = new XMLHttpRequest();
         req.open('POST', URL, true);
         req.setRequestHeader('Content-Type', 'application/json');
         req.addEventListener('load', function() {
+          setSubmitting(false);
           if (req.status < 400) {
             // Success
+            resetForm({});
+            setStatus({ success: true });
           } else {
+            setStatus({ success: false });
             throw Error('Request failed: ' + req.statusText);
           }
         });
         req.send(JSON.stringify(values));
-        setSubmitting(false);
       }}
     >
       {formik => (
