@@ -21,6 +21,11 @@ const Main = ({ data }) => (
         Impressive and consuing that you&apos;ve ended up here. Not much to see
         yet. Have a good time, make good choices.
       </p>
+      <p>
+        Full disclosure: this is a work in progress and you shouldn&apos;t
+        expect most (if any) of these links to actualy work.
+      </p>
+      <p>Thanks for stopping by!</p>
       <h2>Films</h2>
       <div>{data.allMarkdownRemark.totalCount} Posts</div>
       {data.allMarkdownRemark.edges.map(({ node }) => (
