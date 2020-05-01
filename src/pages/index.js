@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import { rhythm } from '../utils/typography'
-import Layout from '../components/layout'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import { rhythm } from '../utils/typography';
+import Layout from '../components/layout';
 
-export default ({ data }) => (
+const Main = ({ data }) => (
   <Layout>
     <div>
       <h1
@@ -13,11 +13,11 @@ export default ({ data }) => (
           border-bottom: 1px solid;
         `}
       >
-        Look! It's a website all about me
+        Look! It&apos;s a website all about me
       </h1>
       <p>
-        Impressive and consuing that you've ended up here. Not much to see yet. 
-        Have a good time, make good choices.
+        Impressive and consuing that you&apos;ve ended up here. Not much to see
+        yet. Have a good time, make good choices.
       </p>
       <h3>Films</h3>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
@@ -30,19 +30,18 @@ export default ({ data }) => (
               color: inherit;
             `}
           >
-
             <h3
               css={css`
-              margin-bottom: ${rhythm(1 / 4)};
-            `}
+                margin-bottom: ${rhythm(1 / 4)};
+              `}
             >
               {node.frontmatter.title}{' '}
               <span
                 css={css`
-                color: #bbb;
-              `}
+                  color: #bbb;
+                `}
               >
-              — {node.frontmatter.date}
+                — {node.frontmatter.date}
               </span>
             </h3>
             <p>{node.excerpt}</p>
@@ -51,7 +50,9 @@ export default ({ data }) => (
       ))}
     </div>
   </Layout>
-)
+);
+
+export default Main;
 
 export const query = graphql`
   query {
@@ -72,4 +73,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 
-export default ({ data }) => {
-  console.log(data)
+const MyFiles = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
       <div>
-        <h1>My Site's Files</h1>
+        <h1>My Site&apos;s Files</h1>
         <table>
           <thead>
             <tr>
@@ -30,8 +30,10 @@ export default ({ data }) => {
         </table>
       </div>
     </Layout>
-  )
-}
+  );
+};
+
+export default MyFiles;
 
 export const query = graphql`
   query {
@@ -46,4 +48,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

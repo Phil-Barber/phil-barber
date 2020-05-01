@@ -1,28 +1,27 @@
 {
-    "extends": [
-        "react-app",
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended",
-        "plugin:flowtype/recommended"
-    ],
-    "plugins": ["jest", "react-hooks", "flowtype"],
-    "settings": {
-        "react": {
-            "version": "detect"
-        },
-        "flowtype": {
-            "onlyFilesWithFlowAnnotation": true
-        }
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": ["react-hooks"],
+  "settings": {
+    "react": {
+      "version": "detect"
     },
-    "env": {
-        "jest/globals": true,
-        "browser": true,
-        "node": true,
-        "es6": true
-    },
-    "rules": {
-        "react/prop-types": 0,
-        "react-hooks/rules-of-hooks": "error"
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
     }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": "error"
+  }
 }
