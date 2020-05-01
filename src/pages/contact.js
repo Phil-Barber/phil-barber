@@ -2,9 +2,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { ContactForm } from '../components/contactForm';
+import SEO from '../components/seo';
 
 const Contact = ({ data }) => (
   <Layout>
+    <SEO title="contact" description="Get in contact with me" />
     <h1>Get In Touch!</h1>
     <p>
       If you&apos;ve got a social enterprise or a good cause that you would like

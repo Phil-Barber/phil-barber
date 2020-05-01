@@ -14,10 +14,16 @@ export const Error = styled.div`
 
 export const TextInput = ({ label, className, textarea, ...props }) => {
   const [field, meta] = useField(props);
+  const inputId = props.id || props.name;
   return (
     <InputContainer className={className}>
-      <Label htmlFor={props.id || props.name}>{label}</Label>
-      <Input as={textarea ? 'textarea' : 'input'} {...field} {...props} />
+      <Label for={inputId}>{label}</Label>
+      <Input
+        id={inputId}
+        as={textarea ? 'textarea' : 'input'}
+        {...field}
+        {...props}
+      />
       {meta.touched && meta.error ? (
         <Error className="error">{meta.error}</Error>
       ) : null}

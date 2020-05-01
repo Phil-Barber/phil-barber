@@ -2,11 +2,13 @@
   "extends": [
     "react-app",
     "eslint:recommended",
+    "eslint-config-react-app",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:flowtype/recommended"
+    "plugin:flowtype/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
-  "plugins": ["react-hooks"],
+  "plugins": ["react-hooks", "jsx-a11y", "graphql"],
   "settings": {
     "react": {
       "version": "detect"

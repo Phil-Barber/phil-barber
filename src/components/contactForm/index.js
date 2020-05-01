@@ -51,35 +51,30 @@ export const ContactForm = () => {
       }}
     >
       {formik => (
-        <>
-          <Form>
-            <S.FullWidthInput
-              label="Email Address*"
-              name="email"
-              type="email"
-            />
-            <S.FlexBox>
-              <S.ShortInput label="Name*" name="name" type="text" />
-              <S.ShortInput label="Company" name="company" type="text" />
-            </S.FlexBox>
-            <S.MessageInput
-              label="Message*"
-              name="body"
-              textarea
-              placeholder={`Hi Phil,
+        <Form name="contact" netlify-honeypot="bot-field" data-netlify="true">
+          <input type="hidden" name="bot-field" value="contact" />
+          <S.FullWidthInput label="Email Address*" name="email" type="email" />
+          <S.FlexBox>
+            <S.ShortInput label="Name*" name="name" type="text" />
+            <S.ShortInput label="Company" name="company" type="text" />
+          </S.FlexBox>
+          <S.MessageInput
+            label="Message*"
+            name="body"
+            textarea
+            placeholder={`Hi Phil,
 
 Hope you're having a great day!
 
 Listen to this really exciting project you could contribute to:`}
-            />
-            <S.FlexBox>
-              <S.SubmitButton type="submit" disabled={formik.isSubmitting}>
-                Submit
-              </S.SubmitButton>
-              <S.RequiredText>*Required field</S.RequiredText>
-            </S.FlexBox>
-          </Form>
-        </>
+          />
+          <S.FlexBox>
+            <S.SubmitButton type="submit" disabled={formik.isSubmitting}>
+              Submit
+            </S.SubmitButton>
+            <S.RequiredText>*Required field</S.RequiredText>
+          </S.FlexBox>
+        </Form>
       )}
     </Formik>
   );
