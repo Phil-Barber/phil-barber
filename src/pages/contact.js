@@ -1,18 +1,21 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import { ContactForm } from '../components/contactForm'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import { ContactForm } from '../components/contactForm';
 
-export default ({ data }) => (
+const Contact = ({ data }) => (
   <Layout>
     <h1>Get In Touch!</h1>
     <p>
-      If you've got a social enterprise or a good cause that you would like some technical help 
-      with, don't hesitate to get in touch using the form below.
+      If you&apos;ve got a social enterprise or a good cause that you would like
+      some technical help with, don&apos;t hesitate to get in touch using the
+      form below.
     </p>
     <ContactForm />
   </Layout>
-)
+);
+
+export default Contact;
 
 export const query = graphql`
   query {
@@ -22,4 +25,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
