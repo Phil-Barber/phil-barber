@@ -1,4 +1,5 @@
 import React from 'react';
+import { useToasts } from 'react-toast-notifications';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import * as S from './index.styled';
@@ -8,6 +9,7 @@ const URL =
 
 export const ContactForm = () => {
   const bodyLimit = 300;
+  const { addToast } = useToasts();
 
   return (
     <Formik
@@ -36,9 +38,13 @@ export const ContactForm = () => {
             // Success
             resetForm({});
             setStatus({ success: true });
+            addToast('Form sent - Thanks!', { appearance: 'success' });
           } else {
             setStatus({ success: false });
-            throw Error('Request failed: ' + req.statusText);
+            addToast(`I have made a mistake... That's emabrrassing.`, {
+              appearance: 'error',
+            });
+            console.error('Request failed: ' + req.statusText);
           }
         });
         req.send(JSON.stringify(values));
