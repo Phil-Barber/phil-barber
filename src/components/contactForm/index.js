@@ -3,6 +3,9 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import * as S from './index.styled';
 
+const URL =
+  'https://8hot7pcq6e.execute-api.eu-west-2.amazonaws.com/dev/email/send';
+
 export const ContactForm = () => {
   const bodyLimit = 300;
 
@@ -24,10 +27,18 @@ export const ContactForm = () => {
           .required('Required'),
       })}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+        const req = new XMLHttpRequest();
+        req.open('POST', URL, true);
+        req.setRequestHeader('Content-Type', 'application/json');
+        req.addEventListener('load', function() {
+          if (req.status < 400) {
+            // Success
+          } else {
+            throw Error('Request failed: ' + req.statusText);
+          }
+        });
+        req.send(JSON.stringify(values));
+        setSubmitting(false);
       }}
     >
       {formik => (
