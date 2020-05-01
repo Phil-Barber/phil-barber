@@ -1,10 +1,15 @@
 import React from 'react';
+import { useToasts } from 'react-toast-notifications';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import * as S from './index.styled';
 
+const URL =
+  'https://8hot7pcq6e.execute-api.eu-west-2.amazonaws.com/dev/email/send';
+
 export const ContactForm = () => {
   const bodyLimit = 300;
+  const { addToast } = useToasts();
 
   return (
     <Formik
@@ -23,11 +28,26 @@ export const ContactForm = () => {
           .max(bodyLimit, `Must be ${bodyLimit} characters or less`)
           .required('Required'),
       })}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
+      onSubmit={(values, { setSubmitting, resetForm, setStatus }) => {
+        const req = new XMLHttpRequest();
+        req.open('POST', URL, true);
+        req.setRequestHeader('Content-Type', 'application/json');
+        req.addEventListener('load', function() {
           setSubmitting(false);
-        }, 400);
+          if (req.status < 400) {
+            // Success
+            resetForm({});
+            setStatus({ success: true });
+            addToast('Form sent - Thanks!', { appearance: 'success' });
+          } else {
+            setStatus({ success: false });
+            addToast(`I have made a mistake... That's emabrrassing.`, {
+              appearance: 'error',
+            });
+            console.error('Request failed: ' + req.statusText);
+          }
+        });
+        req.send(JSON.stringify(values));
       }}
     >
       {formik => (
