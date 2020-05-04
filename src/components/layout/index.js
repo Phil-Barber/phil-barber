@@ -6,11 +6,48 @@ import { useStaticQuery, Link, graphql } from 'gatsby';
 
 import { rhythm } from '../../utils/typography';
 
-const Header = styled(Headroom)`
-  .headroom {
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.secondary};
+const MainHeader = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: ${({ theme }) => `${theme.spacing.xxSmall} ${theme.spacing.normal}`};
+
+  h1 {
+    color: ${({ theme }) => theme.textColors.secondary};
+    margin-bottom: 0;
   }
+`;
+
+const SecondaryHeader = styled.div`
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.tertiary};
+  padding: ${({ theme }) => `
+    ${theme.spacing.xxSmall} 
+    ${theme.spacing.large}
+    ${theme.spacing.xxxSmall}
+  `};
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+const NavLink = styled(StyledLink)`
+  font-size: 18px;
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
+const ContentContainer = styled.div`
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.textColors.primary};
+`;
+
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 750px;
+  padding-top: ${({ theme }) => theme.spacing.large};
+  text-align: justify;
 `;
 
 const Layout = ({ children }) => {
@@ -27,33 +64,28 @@ const Layout = ({ children }) => {
   );
   return (
     <>
-      <Header>
-        <div>
-          <Link to={'/'}>
-            <h3
+      <Headroom>
+        <MainHeader>
+          <StyledLink to={'/'}>
+            <h1
               css={css`
                 margin-bottom: ${rhythm(2)};
                 font-style: normal;
               `}
             >
               {data.site.siteMetadata.title}
-            </h3>
-          </Link>
-        </div>
-        <div>
-          <Link to={'/contact/'}>Contact</Link>
-        </div>
-      </Header>
-      <div
-        css={css`
-          margin: 0 auto;
-          max-width: 700px;
-          padding: ${rhythm(2)};
-          padding-top: ${rhythm(1.5)};
-        `}
-      >
-        {children}
-      </div>
+            </h1>
+          </StyledLink>
+        </MainHeader>
+        <SecondaryHeader>
+          <NavLink to={'/contact/'}>
+            <div>Contact</div>
+          </NavLink>
+        </SecondaryHeader>
+      </Headroom>
+      <ContentContainer>
+        <Content>{children}</Content>
+      </ContentContainer>
     </>
   );
 };
