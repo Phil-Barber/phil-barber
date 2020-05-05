@@ -1,17 +1,16 @@
-const lightGreen = '#7DB46CFF';
-const lightGrey = '#F0F6F7FF';
-const lightBlue = '#ABD6DFFF';
 const black = '#000';
+const white = '#fff';
+const navy = '#001F3F';
+const orange = '#FF851B';
+const silver = '#ddd';
 
 export const theme = {
   colors: {
-    primary: lightGreen,
-    secondary: lightGrey,
-    tertiary: lightBlue,
-  },
-  textColors: {
-    primary: black,
-    secondary: lightGrey,
+    primary: orange,
+    secondary: navy,
+    tertiary: silver,
+    black,
+    white,
   },
   spacing: {
     xxxSmall: '2px',

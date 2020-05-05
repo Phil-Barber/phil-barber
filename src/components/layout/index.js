@@ -11,7 +11,7 @@ const MainHeader = styled.div`
   padding: ${({ theme }) => `${theme.spacing.xxSmall} ${theme.spacing.normal}`};
 
   h1 {
-    color: ${({ theme }) => theme.textColors.secondary};
+    color: ${({ theme }) => theme.colors.secondary};
     margin-bottom: 0;
   }
 `;
@@ -39,8 +39,8 @@ const NavLink = styled(StyledLink)`
 `;
 
 const ContentContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.textColors.primary};
+  background-color: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const Content = styled.div`
