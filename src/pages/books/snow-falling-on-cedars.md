@@ -2,7 +2,7 @@
 title: "Snow Falling on Cedars"
 author: "David Gutterson"
 dateCompleted: "2020-11-4"
-cover: ../../images/books/snow_falling_on_cedars.jpg
+featuredImage: ../../images/books/snow_falling_on_cedars.jpg
 rating: 4/5
 ---
 

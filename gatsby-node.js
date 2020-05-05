@@ -28,13 +28,30 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
+
+  const templateMap = [
+    {
+      regex: /\/films\//,
+      template: './src/templates/film.js',
+    },
+    {
+      regex: /\/books\//,
+      template: './src/templates/book.js',
+    },
+  ];
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve('./src/templates/film.js'),
-      context: {
-        slug: node.fields.slug,
-      },
-    });
+    const slug = node.fields.slug;
+    for (let i = 0; i < templateMap.length; i++) {
+      const { regex, template } = templateMap[i];
+      if (regex.test(slug)) {
+        createPage({
+          path: slug,
+          component: path.resolve(template),
+          context: { slug },
+        });
+        break;
+      }
+    }
   });
 };

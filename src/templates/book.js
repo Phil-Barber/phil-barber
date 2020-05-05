@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const FilmTemplate = ({ data }) => {
+const BookTemplate = ({ data }) => {
   const post = data.markdownRemark;
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
   return (
@@ -19,10 +19,10 @@ const FilmTemplate = ({ data }) => {
   );
 };
 
-export default FilmTemplate;
+export default BookTemplate;
 
 export const query = graphql`
-  query FilmQuery($slug: String!) {
+  query BookQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

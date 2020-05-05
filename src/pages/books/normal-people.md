@@ -2,7 +2,7 @@
 title: "Normal People"
 author: "Sally Rooney"
 dateCompleted: "2020-04-23"
-cover: ../../images/books/normal_people.png
+featuredImage: ../../images/books/normal_people.png
 rating: 4/5
 ---
 

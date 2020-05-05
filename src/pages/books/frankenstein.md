@@ -2,7 +2,7 @@
 title: "Frankenstein"
 author: "Mary Shelley"
 dateCompleted: "2020-03-28"
-cover: ../../images/books/frankenstein.jpg
+featuredImage: ../../images/books/frankenstein.jpeg
 rating: 4/5
 ---
 
