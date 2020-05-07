@@ -29,6 +29,17 @@ const PostsColumn = styled(Column)`
   }
 `;
 
+const PostsTitle = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+`;
+
+const PostsCount = styled.span`
+  font-size: 22px;
+`;
+
 const Main = ({ data }) => (
   <PageWrapper>
     <SEO title="Phil Barber" description="Homepage" />
@@ -53,8 +64,10 @@ const Main = ({ data }) => (
         <p>Thanks for stopping by!</p>
       </AboutColumn>
       <PostsColumn>
-        <h1>Posts</h1>
-        <div>{data.allMarkdownRemark.totalCount} Posts</div>
+        <PostsTitle>
+          <h1>Posts</h1>
+          <PostsCount>Total: {data.allMarkdownRemark.totalCount}</PostsCount>
+        </PostsTitle>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
