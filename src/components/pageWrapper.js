@@ -4,7 +4,7 @@ import Headroom from 'react-headroom';
 import { css } from '@emotion/core';
 import { useStaticQuery, Link, graphql } from 'gatsby';
 
-import { rhythm } from '../../utils/typography';
+import { rhythm } from '../utils/typography';
 
 const MainHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -41,16 +41,11 @@ const NavLink = styled(StyledLink)`
 const ContentContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiary};
   color: ${({ theme }) => theme.colors.secondary};
-`;
-
-const Content = styled.div`
-  margin: 0 auto;
-  max-width: 750px;
-  padding-top: ${({ theme }) => theme.spacing.large};
+  padding: ${({ theme }) => theme.spacing.normal};
   text-align: justify;
 `;
 
-const Layout = ({ children }) => {
+const PageWrapper = ({ children }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -83,11 +78,9 @@ const Layout = ({ children }) => {
           </NavLink>
         </SecondaryHeader>
       </Headroom>
-      <ContentContainer>
-        <Content>{children}</Content>
-      </ContentContainer>
+      <ContentContainer>{children}</ContentContainer>
     </>
   );
 };
 
-export default Layout;
+export default PageWrapper;

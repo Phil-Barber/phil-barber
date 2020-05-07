@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../components/layout';
+import PageWrapper from '../components/pageWrapper';
+import { PageLayout } from '../components/styled';
 
-const Container = styled.div`
+const Content = styled.div`
   font-size: 40px;
   font-weight: 600;
   height: 100vh;
@@ -22,19 +23,21 @@ const Back = styled.span`
 `;
 
 const FourOhFour = () => (
-  <Layout>
-    <Container>
-      <div>¯\_(ツ)_/¯</div>
-      <div>Nothing to see here folks!</div>
-      <HomeLink href="/">
-        Take me back
-        {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-        <Back role="img" aria-label="back">
-          🔙
-        </Back>
-      </HomeLink>
-    </Container>
-  </Layout>
+  <PageWrapper>
+    <PageLayout>
+      <Content>
+        <div>¯\_(ツ)_/¯</div>
+        <div>Nothing to see here folks!</div>
+        <HomeLink href="/">
+          Take me back
+          {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+          <Back role="img" aria-label="back">
+            🔙
+          </Back>
+        </HomeLink>
+      </Content>
+    </PageLayout>
+  </PageWrapper>
 );
 
 export default FourOhFour;
