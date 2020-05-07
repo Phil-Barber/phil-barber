@@ -54,7 +54,7 @@ const Main = ({ data }) => (
           Look! It&apos;s a website all about me
         </h1>
         <p>
-          Impressive and consuing that you&apos;ve ended up here. Not much to
+          Impressive and confusing that you&apos;ve ended up here. Not much to
           see yet. Have a good time, make good choices.
         </p>
         <p>
