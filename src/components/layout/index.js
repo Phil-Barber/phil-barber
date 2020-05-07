@@ -42,6 +42,7 @@ const ContentContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiary};
   color: ${({ theme }) => theme.colors.secondary};
   padding: ${({ theme }) => theme.spacing.normal};
+  text-align: justify;
 `;
 
 const Layout = ({ children }) => {

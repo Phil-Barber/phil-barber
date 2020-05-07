@@ -6,7 +6,6 @@ const Container = styled.div`
   margin: 0 auto;
   max-width: 750px;
   padding-top: ${({ theme }) => theme.spacing.large};
-  text-align: justify;
 `;
 
 const Content = styled.div`
