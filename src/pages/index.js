@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import { rhythm } from '../utils/typography';
-import Layout from '../components/layout';
+import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
 
 const Container = styled.div`
@@ -27,7 +27,7 @@ const PostsColumn = styled(Column)`
 `;
 
 const Main = ({ data }) => (
-  <Layout>
+  <PageWrapper>
     <SEO title="Phil Barber" description="Homepage" />
     <Container>
       <AboutColumn>
@@ -81,7 +81,7 @@ const Main = ({ data }) => (
         ))}
       </PostsColumn>
     </Container>
-  </Layout>
+  </PageWrapper>
 );
 
 export default Main;

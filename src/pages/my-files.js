@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import PageWrappert from '../components/pageWrapper';
 
 const MyFiles = ({ data }) => {
   console.log(data);
   return (
-    <Layout>
+    <PageWrappert>
       <div>
         <h1>My Site&apos;s Files</h1>
         <table>
@@ -29,7 +29,7 @@ const MyFiles = ({ data }) => {
           </tbody>
         </table>
       </div>
-    </Layout>
+    </PageWrappert>
   );
 };
 

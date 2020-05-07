@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../components/layout';
+import PageWrappert from '../components/pageWrapper';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -28,7 +28,7 @@ const Back = styled.span`
 `;
 
 const FourOhFour = () => (
-  <Layout>
+  <PageWrappert>
     <Container>
       <Content>
         <div>¯\_(ツ)_/¯</div>
@@ -42,7 +42,7 @@ const FourOhFour = () => (
         </HomeLink>
       </Content>
     </Container>
-  </Layout>
+  </PageWrappert>
 );
 
 export default FourOhFour;

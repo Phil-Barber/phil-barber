@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import PageWrapper from '../components/pageWrapper';
 import { ContactForm } from '../components/contactForm';
 import SEO from '../components/seo';
 
 const Contact = ({ data }) => (
-  <Layout>
+  <PageWrapper>
     <SEO title="contact" description="Get in contact with me" />
     <h1>Get In Touch!</h1>
     <p>
@@ -14,7 +14,7 @@ const Contact = ({ data }) => (
       form below.
     </p>
     <ContactForm />
-  </Layout>
+  </PageWrapper>
 );
 
 export default Contact;
