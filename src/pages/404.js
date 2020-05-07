@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import PageWrappert from '../components/pageWrapper';
-
-const Container = styled.div`
-  margin: 0 auto;
-  max-width: 750px;
-  padding-top: ${({ theme }) => theme.spacing.large};
-`;
+import PageWrapper from '../components/pageWrapper';
+import { PageLayout } from '../components/styled';
 
 const Content = styled.div`
   font-size: 40px;
@@ -28,8 +23,8 @@ const Back = styled.span`
 `;
 
 const FourOhFour = () => (
-  <PageWrappert>
-    <Container>
+  <PageWrapper>
+    <PageLayout>
       <Content>
         <div>¯\_(ツ)_/¯</div>
         <div>Nothing to see here folks!</div>
@@ -41,8 +36,8 @@ const FourOhFour = () => (
           </Back>
         </HomeLink>
       </Content>
-    </Container>
-  </PageWrappert>
+    </PageLayout>
+  </PageWrapper>
 );
 
 export default FourOhFour;
