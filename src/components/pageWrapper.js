@@ -40,6 +40,13 @@ const ContentContainer = styled.div`
   color: ${({ theme }) => theme.colors.secondary};
   padding: ${({ theme }) => theme.spacing.normal};
   text-align: justify;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: ${({ theme }) => theme.colors.secondary};
+  }
 `;
 
 const PageWrapper = ({ children }) => {
