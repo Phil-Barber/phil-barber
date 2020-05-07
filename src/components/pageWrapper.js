@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Headroom from 'react-headroom';
-import { css } from '@emotion/core';
 import { useStaticQuery, Link, graphql } from 'gatsby';
-
-import { rhythm } from '../utils/typography';
 
 const MainHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -62,14 +59,7 @@ const PageWrapper = ({ children }) => {
       <Headroom>
         <MainHeader>
           <StyledLink to={'/'}>
-            <h1
-              css={css`
-                margin-bottom: ${rhythm(2)};
-                font-style: normal;
-              `}
-            >
-              {data.site.siteMetadata.title}
-            </h1>
+            <h1>{data.site.siteMetadata.title}</h1>
           </StyledLink>
         </MainHeader>
         <SecondaryHeader>

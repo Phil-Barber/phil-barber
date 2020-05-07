@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import { css } from '@emotion/core';
-import { rhythm } from '../utils/typography';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
 
@@ -24,6 +23,10 @@ const AboutColumn = styled(Column)`
 const PostsColumn = styled(Column)`
   flex-grow: 5;
   flex-basis: 200px;
+
+  h3 {
+    margin-bottom: ${({ theme }) => theme.spacing.xxSmall};
+  }
 `;
 
 const Main = ({ data }) => (
@@ -61,11 +64,7 @@ const Main = ({ data }) => (
                 color: inherit;
               `}
             >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
+              <h3>
                 {node.frontmatter.title}{' '}
                 <span
                   css={css`
