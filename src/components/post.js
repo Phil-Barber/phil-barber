@@ -8,6 +8,8 @@ const Excerpt = styled.p`
   visibility: hidden;
   max-height: 0px;
   overflow: hidden;
+  transition: max-height 1s, visibility 1s;
+  position: relative;
 
   ${({ isHovered }) =>
     isHovered &&
@@ -16,7 +18,18 @@ const Excerpt = styled.p`
     visibility: visible;
   `};
 
-  transition: max-height 1s, visibility 1s;
+  :after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(
+      transparent 50px,
+      ${({ theme }) => theme.colors.tertiary}
+    );
+  }
 `;
 
 export const Post = ({ fields, frontmatter, excerpt }) => {
