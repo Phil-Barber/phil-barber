@@ -16,7 +16,7 @@ const Excerpt = styled.p`
     visibility: visible;
   `};
 
-  transition: max-height 1s;
+  transition: max-height 1s, visibility 1s;
 `;
 
 export const Post = ({ fields, frontmatter, excerpt }) => {
