@@ -41,13 +41,7 @@ const NavLink = styled(StyledLink)`
 const ContentContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiary};
   color: ${({ theme }) => theme.colors.secondary};
-`;
-
-const Content = styled.div`
-  margin: 0 auto;
-  max-width: 750px;
-  padding-top: ${({ theme }) => theme.spacing.large};
-  text-align: justify;
+  padding: ${({ theme }) => theme.spacing.normal};
 `;
 
 const Layout = ({ children }) => {
@@ -83,9 +77,7 @@ const Layout = ({ children }) => {
           </NavLink>
         </SecondaryHeader>
       </Headroom>
-      <ContentContainer>
-        <Content>{children}</Content>
-      </ContentContainer>
+      <ContentContainer>{children}</ContentContainer>
     </>
   );
 };
