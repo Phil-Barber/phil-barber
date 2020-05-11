@@ -5,6 +5,7 @@ import { css } from '@emotion/core';
 import { useHover } from '../hooks/useHover';
 
 const PostContainer = styled.div`
+  padding: ${({ theme }) => theme.spacing.xxSmall};
   transition: background-color 1s ease-out;
   :hover {
     background-color: white;
