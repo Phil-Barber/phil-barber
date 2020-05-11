@@ -3,7 +3,7 @@ title: "Spotlight"
 date: "2015"
 dateCompleted: "2020-02-05"
 featuredImage: ../../images/films/spotlight.jpg
-director: "Tom McCarthy"
+director: ["Tom McCarthy"]
 starring: ["Rachel McAdams", "Mark Rufffalo", "Michael Keaton"]
 ---
 
