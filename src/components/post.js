@@ -6,6 +6,7 @@ import { useHover } from '../hooks/useHover';
 
 const PostContainer = styled.div`
   padding: ${({ theme }) => theme.spacing.xxSmall};
+  padding-bottom: 0;
   transition: background-color 1s ease-out;
   :hover {
     background-color: white;
@@ -34,8 +35,8 @@ const Excerpt = styled.p`
     left: 0;
     top: 0;
     background: linear-gradient(
-      transparent 50px,
-      ${({ theme }) => theme.colors.tertiary}
+      transparent 40px,
+      ${({ theme }) => theme.colors.white}
     );
   }
 `;
