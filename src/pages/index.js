@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
+import { Post } from '../components/post';
 
 const Container = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  height: 100vh;
 `;
 
 const Column = styled.div`
@@ -69,27 +71,7 @@ const Main = ({ data }) => (
           <PostsCount>Total: {data.allMarkdownRemark.totalCount}</PostsCount>
         </PostsTitle>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3>
-                {node.frontmatter.title}{' '}
-                <span
-                  css={css`
-                    color: #667269;
-                  `}
-                >
-                  — {node.frontmatter.dateCompleted}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
+          <Post key={node.id} {...node} />
         ))}
       </PostsColumn>
     </Container>
