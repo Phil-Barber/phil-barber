@@ -4,6 +4,14 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import { useHover } from '../hooks/useHover';
 
+const PostContainer = styled.div`
+  padding: ${({ theme }) => theme.spacing.xxSmall};
+  transition: background-color 1s ease-out;
+  :hover {
+    background-color: white;
+  }
+`;
+
 const Excerpt = styled.p`
   visibility: hidden;
   max-height: 0px;
@@ -36,26 +44,28 @@ export const Post = ({ fields, frontmatter, excerpt }) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
-    <div ref={hoverRef}>
-      <Link
-        to={fields.slug}
-        css={css`
-          text-decoration: none;
-          color: inherit;
-        `}
-      >
-        <h3>
-          {frontmatter.title}
-          <span
-            css={css`
-              color: #667269;
-            `}
-          >
-            — {frontmatter.date}
-          </span>
-        </h3>
-        <Excerpt isHovered={isHovered}>{excerpt}</Excerpt>
-      </Link>
-    </div>
+    <dev ref={hoverRef}>
+      <PostContainer>
+        <Link
+          to={fields.slug}
+          css={css`
+            text-decoration: none;
+            color: inherit;
+          `}
+        >
+          <h3>
+            {frontmatter.title}
+            <span
+              css={css`
+                color: #667269;
+              `}
+            >
+              — {frontmatter.dateCompleted}
+            </span>
+          </h3>
+          <Excerpt isHovered={isHovered}>{excerpt}</Excerpt>
+        </Link>
+      </PostContainer>
+    </dev>
   );
 };
