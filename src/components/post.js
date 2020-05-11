@@ -46,7 +46,7 @@ export const Post = ({ fields, frontmatter, excerpt }) => {
                 color: #667269;
               `}
             >
-              — {frontmatter.date}
+              — {frontmatter.dateCompleted}
             </span>
           </h3>
           <Excerpt isHovered={isHovered}>{excerpt}</Excerpt>
