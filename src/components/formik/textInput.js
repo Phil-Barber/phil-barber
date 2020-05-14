@@ -24,9 +24,9 @@ export const TextInput = ({ label, className, textarea, ...props }) => {
         {...field}
         {...props}
       />
-      {meta.touched && meta.error ? (
+      {meta.touched && meta.error && (
         <Error className="error">{meta.error}</Error>
-      ) : null}
+      )}
     </InputContainer>
   );
 };

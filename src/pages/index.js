@@ -57,7 +57,27 @@ const Main = ({ data }) => (
         </h1>
         <p>
           Impressive and confusing that you&apos;ve ended up here. Not much to
-          see yet. Have a good time, make good choices.
+          see yet.
+        </p>
+        <p>
+          This is a work in progess site, beginning as a 100 days of{' '}
+          <a href="https://www.gatsbyjs.org/blog/tags/100-days-of-gatsby/">
+            Gatsby
+          </a>{' '}
+          project. You can find recent books and films I&apos;ve been enjoying,
+          perhaps more in the future.
+        </p>
+        <p>
+          I use vim and don&apos;t have a spell checker. Couple that with my
+          horrendous spelling and you&apos;ll be sure to find a few (many)
+          spelling errors. Feel free to open a{' '}
+          <a href="https://github.com/Phil-Barber/phil-barber/">PR</a>!
+        </p>
+        <p>
+          I won&apos;t be offended that you&apos;ve already noticed that
+          I&apos;m definitely <strong>not</strong> a designer. I did my best
+          with the colours OK, I&apos;d appreciate it if we could just leave it
+          at that.
         </p>
         <p>
           Full disclosure: this is a work in progress and you shouldn&apos;t

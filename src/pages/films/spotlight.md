@@ -7,9 +7,9 @@ director: ["Tom McCarthy"]
 starring: ["Rachel McAdams", "Mark Rufffalo", "Michael Keaton"]
 ---
 
-The only thing I really have to say on Spotlihgt is this:
+The only thing I really have to say on Spotlight is this:
 
-You must watch it.
+**You must watch it.**
 
 
 The film follows a group of reporters at the Boston globe uncover a wide scale
@@ -19,11 +19,11 @@ gentle build of momentum from the almost inane first lead to the crashing
 waterfall implicated priests and the countless victims left in their wake was
 exhilirating.
 
-McCarthy builds momentum expertly. Sweeping the viewer up into the ebbs and 
-flows of the story. The dead ends, the not-so-dead ends. The sheer scale. It's
-extraordinary.
+McCarthy builds momentum expertly. Sweeping the viewer up into the ebbs and
+flows of the story. The dead ends, the not-so-dead ends. The sheer scale of it 
+all. It's extraordinary.
 
-Excellent casting and particularly superb performances from Rachel McAdams and 
-Mark Ruffalo as standouts.
+Excellent casting and particularly superb performances from Rachel McAdams and
+Mark Ruffalo.
 
 
