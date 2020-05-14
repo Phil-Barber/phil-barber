@@ -1,68 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
-import Img from 'gatsby-image';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
-
-const Container = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  height: 100vh;
-`;
-
-const Column = styled.div`
-  padding: ${({ theme }) => theme.spacing.normal};
-  padding-top: ${({ theme }) => theme.spacing.large};
-`;
-
-const ContentColumn = styled(Column)`
-  flex-grow: 6;
-  flex-basis: 300px;
-  margin-right: ${({ theme }) => theme.spacing.xxxLarge};
-`;
-
-const InfoColumn = styled(Column)`
-  margin-top: ${({ theme }) => theme.spacing.large};
-  flex-grow: 5;
-  flex-basis: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: ${({ theme }) => theme.colors.secondary};
-`;
-
-const Poster = styled(Img)`
-  flex-basis: 200px;
-  flex-grow: 1;
-`;
-
-const DetailsContainer = styled.div`
-  padding: ${({ theme }) => theme.spacing.normal};
-  flex-grow: 1;
-  flex-basis: 100px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-const Detail = styled.span`
-  display: block;
-  margin-bottom: ${({ theme }) => theme.spacing.xSmall};
-  text-align: left;
-
-  strong {
-    display: block;
-    font-weight: 600;
-  }
-`;
+import * as S from './review.styled';
 
 const Details = ({ details }) => (
-  <DetailsContainer>
+  <S.DetailsContainer>
     {details.map(({ attr, value }) => (
-      <Detail key={attr}>
+      <S.Detail key={attr}>
         <strong>{attr}:</strong> {value}
-      </Detail>
+      </S.Detail>
     ))}
-  </DetailsContainer>
+  </S.DetailsContainer>
 );
 
 export const Review = ({
@@ -75,18 +23,18 @@ export const Review = ({
   return (
     <PageWrapper>
       <SEO title={title} description={description} />
-      <Container>
-        <InfoColumn>
-          <Poster fluid={imageFluid} imgStyle={{ objectFit: 'contain' }} />
+      <S.Container>
+        <S.InfoColumn>
+          <S.Poster fluid={imageFluid} imgStyle={{ objectFit: 'contain' }} />
           <Details details={details} />
-        </InfoColumn>
-        <ContentColumn>
+        </S.InfoColumn>
+        <S.ContentColumn>
           <div>
             <h1>{title}</h1>
             {children}
           </div>
-        </ContentColumn>
-      </Container>
+        </S.ContentColumn>
+      </S.Container>
     </PageWrapper>
   );
 };
