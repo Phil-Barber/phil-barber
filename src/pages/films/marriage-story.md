@@ -3,8 +3,9 @@ title: "Marriage Story"
 released: "2019"
 dateCompleted: "2020-02-04"
 featuredImage: ../../images/films/marriage_story.jpg
-director: "Noah Baumbach"
+director: ["Noah Baumbach"]
 starring: ["Adam Driver", "Scarlett Johanssson"]
+
 ---
 
 

@@ -1,24 +1,39 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import PageWrapper from '../components/pageWrapper';
-import { PageLayout } from '../components/styled';
-import SEO from '../components/seo';
+import { Review } from './review';
 
 const BookTemplate = ({ data }) => {
   const post = data.markdownRemark;
+  const { published, author, dateCompleted, rating } = post.frontmatter;
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
+  const details = [
+    {
+      attr: 'Published',
+      value: published,
+    },
+    {
+      attr: 'Author',
+      value: author,
+    },
+    {
+      attr: 'Read',
+      value: dateCompleted,
+    },
+    {
+      attr: 'Rating',
+      value: rating,
+    },
+  ];
+
   return (
-    <PageWrapper>
-      <PageLayout>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <div>
-          <h1>{post.frontmatter.title}</h1>
-          <Img fluid={featuredImgFluid} />
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-      </PageLayout>
-    </PageWrapper>
+    <Review
+      imageFluid={featuredImgFluid}
+      details={details}
+      title={post.frontmatter.title}
+      description={post.frontmatter.excerpt}
+    >
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    </Review>
   );
 };
 
@@ -30,6 +45,10 @@ export const query = graphql`
       html
       frontmatter {
         title
+        published
+        author
+        dateCompleted
+        rating
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {

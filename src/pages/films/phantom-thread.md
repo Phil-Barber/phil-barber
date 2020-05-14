@@ -3,7 +3,7 @@ title: "Phantom Thread"
 released: "2017"
 dateCompleted: "2020-02-03"
 featuredImage: ../../images/films/phantom_thread.jpg
-director: "Paul Thomas Anderson"
+director: ["Paul Thomas Anderson"]
 starring: ["Vicky Krieps", "Daniel Day-Lewis"]
 ---
 

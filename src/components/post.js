@@ -45,7 +45,7 @@ export const Post = ({ fields, frontmatter, excerpt }) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
-    <dev ref={hoverRef}>
+    <div ref={hoverRef}>
       <PostContainer>
         <Link
           to={fields.slug}
@@ -67,6 +67,6 @@ export const Post = ({ fields, frontmatter, excerpt }) => {
           <Excerpt isHovered={isHovered}>{excerpt}</Excerpt>
         </Link>
       </PostContainer>
-    </dev>
+    </div>
   );
 };

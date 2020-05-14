@@ -1,24 +1,39 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import PageWrapper from '../components/pageWrapper';
-import { PageLayout } from '../components/styled';
-import SEO from '../components/seo';
+import { Review } from './review';
 
 const FilmTemplate = ({ data }) => {
   const post = data.markdownRemark;
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
+  const { released, dateCompleted, director, starring } = post.frontmatter;
+  const details = [
+    {
+      attr: 'Released',
+      value: released,
+    },
+    {
+      attr: 'Watched',
+      value: dateCompleted,
+    },
+    {
+      attr: 'Director',
+      value: director.join(', '),
+    },
+    {
+      attr: 'Starring',
+      value: starring.join(', '),
+    },
+  ];
+
   return (
-    <PageWrapper>
-      <PageLayout>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <div>
-          <h1>{post.frontmatter.title}</h1>
-          <Img fluid={featuredImgFluid} />
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-      </PageLayout>
-    </PageWrapper>
+    <Review
+      imageFluid={featuredImgFluid}
+      details={details}
+      title={post.frontmatter.title}
+      description={post.frontmatter.excerpt}
+    >
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    </Review>
   );
 };
 
@@ -30,9 +45,13 @@ export const query = graphql`
       html
       frontmatter {
         title
+        released
+        dateCompleted
+        director
+        starring
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 300, maxHeight: 400, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
