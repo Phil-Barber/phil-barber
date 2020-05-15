@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { css } from '@emotion/core';
 import { useHover } from '../hooks/useHover';
 
 const PostContainer = styled.div`
@@ -42,31 +41,28 @@ const Excerpt = styled.p`
   }
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
+const Date = styled.span`
+  color: #667269;
+`;
+
 export const Post = ({ fields, frontmatter, excerpt }) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
     <div ref={hoverRef}>
       <PostContainer>
-        <Link
-          to={fields.slug}
-          css={css`
-            text-decoration: none;
-            color: inherit;
-          `}
-        >
+        <StyledLink to={fields.slug}>
           <h3>
             {frontmatter.title}
-            <span
-              css={css`
-                color: #667269;
-              `}
-            >
-              — {frontmatter.dateCompleted}
-            </span>
+            <Date> — {frontmatter.dateCompleted}</Date>
           </h3>
           <Excerpt isHovered={isHovered}>{excerpt}</Excerpt>
-        </Link>
+        </StyledLink>
       </PostContainer>
     </div>
   );

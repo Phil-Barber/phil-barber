@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import { css } from '@emotion/core';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
 import { Post } from '../components/post';
@@ -20,6 +19,10 @@ const Column = styled.div`
 const AboutColumn = styled(Column)`
   flex-grow: 6;
   flex-basis: 300px;
+  h1 {
+    display: inline-block;
+    border-bottom: 1px solid;
+  }
 `;
 
 const PostsColumn = styled(Column)`
@@ -47,14 +50,7 @@ const Main = ({ data }) => (
     <SEO title="Phil Barber" description="Homepage" />
     <Container>
       <AboutColumn>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Look! It&apos;s a website all about me
-        </h1>
+        <h1>Look! It&apos;s a website all about me</h1>
         <p>
           Impressive and confusing that you&apos;ve ended up here. Not much to
           see yet.
