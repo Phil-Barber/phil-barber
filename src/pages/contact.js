@@ -1,11 +1,10 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
 import { PageLayout } from '../components/styled';
 import { ContactForm } from '../components/contactForm';
 import SEO from '../components/seo';
 
-const Contact = ({ data }) => (
+export const Contact = () => (
   <PageWrapper>
     <PageLayout>
       <SEO title="contact" description="Get in contact with me" />
@@ -21,13 +20,3 @@ const Contact = ({ data }) => (
 );
 
 export default Contact;
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

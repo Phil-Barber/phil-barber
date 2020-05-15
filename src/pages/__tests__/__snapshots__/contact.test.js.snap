@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact Matches snapshot 1`] = `
+<div>
+  <div
+    class="headroom-wrapper"
+  >
+    <div
+      class="headroom headroom--unfixed"
+      style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3D(0, 0, 0);"
+    >
+      <div
+        class="sc-AxjAm cnLZhI"
+      >
+        <a
+          class="sc-AxiKw fumOHP"
+          href="/"
+        >
+          <h1>
+            Test title
+          </h1>
+        </a>
+      </div>
+      <div
+        class="sc-AxirZ jpPxbK"
+      >
+        <a
+          class="sc-AxiKw sc-AxhCb eWSHWr"
+          href="/contact/"
+        >
+          <div>
+            Contact
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-AxhUy ldFZaT"
+  >
+    <div
+      class="sc-AxgMl eonDWd"
+    >
+      <h1>
+        Get In Touch!
+      </h1>
+      <p>
+        If you've got a social enterprise or a good cause that you would like some technical help with, don't hesitate to get in touch using the form below.
+      </p>
+      <div>
+        Mock Form
+      </div>
+    </div>
+  </div>
+</div>
+`;
