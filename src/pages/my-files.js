@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
 import { PageLayout } from '../components/styled';
 
-const MyFiles = ({ data }) => {
+export const MyFiles = ({ data }) => {
   return (
     <PageWrapper>
       <PageLayout>

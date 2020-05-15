@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyFiles Matches snapshot 1`] = `
+<div>
+  <div
+    class="headroom-wrapper"
+  >
+    <div
+      class="headroom headroom--unfixed"
+      style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3D(0, 0, 0);"
+    >
+      <div
+        class="sc-AxjAm cnLZhI"
+      >
+        <a
+          class="sc-AxiKw fumOHP"
+          href="/"
+        >
+          <h1>
+            Test title
+          </h1>
+        </a>
+      </div>
+      <div
+        class="sc-AxirZ jpPxbK"
+      >
+        <a
+          class="sc-AxiKw sc-AxhCb eWSHWr"
+          href="/contact/"
+        >
+          <div>
+            Contact
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-AxhUy ldFZaT"
+  >
+    <div
+      class="sc-AxgMl eonDWd"
+    >
+      <div>
+        <h1>
+          My Site's Files
+        </h1>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                relativePath
+              </th>
+              <th>
+                prettySize
+              </th>
+              <th>
+                extension
+              </th>
+              <th>
+                birthTime
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                ./test
+              </td>
+              <td>
+                10
+              </td>
+              <td>
+                .js
+              </td>
+              <td>
+                12:00pm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                ./test2
+              </td>
+              <td>
+                20
+              </td>
+              <td>
+                .js
+              </td>
+              <td>
+                12:00pm
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
