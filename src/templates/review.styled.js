@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
 `;
 
 export const Column = styled.div`
