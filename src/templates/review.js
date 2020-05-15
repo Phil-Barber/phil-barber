@@ -26,7 +26,7 @@ export const Review = ({
       <S.Container>
         <S.InfoColumn>
           <S.Poster fluid={imageFluid} imgStyle={{ objectFit: 'contain' }} />
-          <Details details={details} />
+          <Details key="details" details={details} />
         </S.InfoColumn>
         <S.ContentColumn>
           <div>
