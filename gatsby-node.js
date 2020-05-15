@@ -42,9 +42,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const slug = node.fields.slug;
+    let matched = false;
     for (let i = 0; i < templateMap.length; i++) {
       const { regex, template } = templateMap[i];
       if (regex.test(slug)) {
+        matched = true;
         createPage({
           path: slug,
           component: path.resolve(template),
@@ -52,6 +54,13 @@ exports.createPages = async ({ graphql, actions }) => {
         });
         break;
       }
+    }
+    if (!matched) {
+      createPage({
+        path: slug,
+        component: path.resolve('./src/templates/generic.js'),
+        context: { slug },
+      });
     }
   });
 };
