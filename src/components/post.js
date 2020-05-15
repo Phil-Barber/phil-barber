@@ -8,6 +8,7 @@ const PostContainer = styled.div`
   padding: ${({ theme }) => theme.spacing.xxSmall};
   padding-bottom: 0;
   transition: background-color 1s ease-out;
+  text-align: left;
   :hover {
     background-color: white;
   }
