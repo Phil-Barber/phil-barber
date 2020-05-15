@@ -6,7 +6,6 @@ module.exports = {
     siteUrl: 'https://phil-barber.uk/',
   },
   plugins: [
-    'gatsby-plugin-emotion',
     `gatsby-plugin-sharp`,
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
