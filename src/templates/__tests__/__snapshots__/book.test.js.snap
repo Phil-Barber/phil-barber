@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookTemplate Matches snapshot 1`] = `
+<Review
+  details={
+    Array [
+      Object {
+        "attr": "Published",
+        "value": "2019",
+      },
+      Object {
+        "attr": "Author",
+        "value": "Collin",
+      },
+      Object {
+        "attr": "Read",
+        "value": "2018-02-11",
+      },
+      Object {
+        "attr": "Rating",
+        "value": "4/5",
+      },
+    ]
+  }
+  imageFluid="ImageFluid"
+  title="BookTemplate title"
+>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<div>This is the book review</div>",
+      }
+    }
+  />
+</Review>
+`;
