@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
     "lint": "eslint src/** --no-error-on-unmatched-pattern",
     "lint:css": "stylelint './src/**/*.styled.js'",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
     "babel-jest": "^26.0.1",
     "babel-preset-gatsby": "^0.4.2",
@@ -59,7 +60,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "react-test-renderer": "^16.13.1",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",

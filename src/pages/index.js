@@ -45,7 +45,7 @@ const PostsCount = styled.span`
   font-size: 22px;
 `;
 
-const Main = ({ data }) => (
+export const Main = ({ data }) => (
   <PageWrapper>
     <SEO title="Phil Barber" description="Homepage" />
     <Container>
