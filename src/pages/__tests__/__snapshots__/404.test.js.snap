@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FourOhFour Matches snapshot 1`] = `
+<div>
+  <div
+    class="headroom-wrapper"
+  >
+    <div
+      class="headroom headroom--unfixed"
+      style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3D(0, 0, 0);"
+    >
+      <div
+        class="sc-AxjAm cnLZhI"
+      >
+        <a
+          class="sc-AxiKw fumOHP"
+          href="/"
+        >
+          <h1>
+            Test title
+          </h1>
+        </a>
+      </div>
+      <div
+        class="sc-AxirZ jpPxbK"
+      >
+        <a
+          class="sc-AxiKw sc-AxhCb eWSHWr"
+          href="/contact/"
+        >
+          <div>
+            Contact
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-AxhUy ldFZaT"
+  >
+    <div
+      class="sc-AxgMl eonDWd"
+    >
+      <div
+        class="sc-AxheI bcWEDx"
+      >
+        <div>
+          ¯\\_(ツ)_/¯
+        </div>
+        <div>
+          Nothing to see here folks!
+        </div>
+        <a
+          class="sc-Axmtr leveLj"
+          href="/"
+        >
+          Take me back
+          <span
+            aria-label="back"
+            class="sc-AxmLO gfEecM"
+            role="img"
+          >
+            🔙
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
