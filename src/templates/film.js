@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Review } from './review';
 
-const FilmTemplate = ({ data }) => {
+export const FilmTemplate = ({ data }) => {
   const post = data.markdownRemark;
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
   const { released, dateCompleted, director, starring } = post.frontmatter;
