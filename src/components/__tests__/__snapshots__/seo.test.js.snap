@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SEO defaultProps Matches snapshot 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en",
+    }
+  }
+  meta={
+    Array [
+      Object {
+        "content": "Test description",
+        "name": "description",
+      },
+      Object {
+        "content": "Test title",
+        "property": "og:title",
+      },
+      Object {
+        "content": "Test description",
+        "property": "og:description",
+      },
+      Object {
+        "content": "website",
+        "property": "og:type",
+      },
+      Object {
+        "content": "summary",
+        "name": "twitter:card",
+      },
+      Object {
+        "content": "Test author",
+        "name": "twitter:creator",
+      },
+      Object {
+        "content": "Test title",
+        "name": "twitter:title",
+      },
+      Object {
+        "content": "Test description",
+        "name": "twitter:description",
+      },
+    ]
+  }
+  title="Test title"
+  titleTemplate="%s | Test title template"
+/>
+`;

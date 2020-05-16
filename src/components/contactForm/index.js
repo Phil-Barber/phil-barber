@@ -19,9 +19,7 @@ export const ContactForm = () => {
         body: '',
       }}
       validationSchema={Yup.object({
-        email: Yup.string()
-          .email('Invalid email address')
-          .required('Required'),
+        email: Yup.string().email('Invalid email address').required('Required'),
         name: Yup.string().required('Required'),
         company: Yup.string(),
         body: Yup.string()
@@ -32,7 +30,7 @@ export const ContactForm = () => {
         const req = new XMLHttpRequest();
         req.open('POST', URL, true);
         req.setRequestHeader('Content-Type', 'application/json');
-        req.addEventListener('load', function() {
+        req.addEventListener('load', function () {
           setSubmitting(false);
           if (req.status < 400) {
             // Success
@@ -50,7 +48,7 @@ export const ContactForm = () => {
         req.send(JSON.stringify(values));
       }}
     >
-      {formik => (
+      {(formik) => (
         <Form name="contact" netlify-honeypot="bot-field" data-netlify="true">
           <input type="hidden" name="bot-field" value="contact" />
           <S.FullWidthInput label="Email Address*" name="email" type="email" />

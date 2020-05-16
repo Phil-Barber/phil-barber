@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmTemplate Matches snapshot 1`] = `
+<Review
+  details={
+    Array [
+      Object {
+        "attr": "Released",
+        "value": "2019",
+      },
+      Object {
+        "attr": "Watched",
+        "value": "2018-02-11",
+      },
+      Object {
+        "attr": "Director",
+        "value": "Director 1, Director 2",
+      },
+      Object {
+        "attr": "Starring",
+        "value": "Some Gal, Some Guy",
+      },
+    ]
+  }
+  imageFluid="ImageFluid"
+  title="FilmTemplate title"
+>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<div>This is the film review</div>",
+      }
+    }
+  />
+</Review>
+`;

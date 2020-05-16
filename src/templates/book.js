@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Review } from './review';
 
-const BookTemplate = ({ data }) => {
+export const BookTemplate = ({ data }) => {
   const post = data.markdownRemark;
   const { published, author, dateCompleted, rating } = post.frontmatter;
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;

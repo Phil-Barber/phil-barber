@@ -10,7 +10,7 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const Generic = ({ data }) => (
+export const Generic = ({ data }) => (
   <PageWrapper>
     <SEO
       title={data.markdownRemark.frontmatter.title}

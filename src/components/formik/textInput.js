@@ -17,7 +17,7 @@ export const TextInput = ({ label, className, textarea, ...props }) => {
   const inputId = props.id || props.name;
   return (
     <InputContainer className={className}>
-      <Label for={inputId}>{label}</Label>
+      <Label htmlFor={inputId}>{label}</Label>
       <Input
         id={inputId}
         as={textarea ? 'textarea' : 'input'}
@@ -25,7 +25,9 @@ export const TextInput = ({ label, className, textarea, ...props }) => {
         {...props}
       />
       {meta.touched && meta.error && (
-        <Error className="error">{meta.error}</Error>
+        <Error className="error" data-testid="error">
+          {meta.error}
+        </Error>
       )}
     </InputContainer>
   );

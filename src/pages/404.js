@@ -22,7 +22,7 @@ const Back = styled.span`
   font-size: 25px;
 `;
 
-const FourOhFour = () => (
+export const FourOhFour = () => (
   <PageWrapper>
     <PageLayout>
       <Content>
