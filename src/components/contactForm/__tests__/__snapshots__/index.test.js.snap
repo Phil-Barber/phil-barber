@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm matches snapshot 1`] = `
+<div>
+  <form
+    action="#"
+    data-netlify="true"
+    name="contact"
+    netlify-honeypot="bot-field"
+  >
+    <input
+      name="bot-field"
+      type="hidden"
+      value="contact"
+    />
+    <div
+      class="sc-AxjAm cKYGmA sc-AxhUy sc-AxgMl lcbDUl"
+    >
+      <label
+        class="sc-AxirZ ktnnZK"
+        for="email"
+      >
+        Email Address*
+      </label>
+      <input
+        class="sc-AxiKw bOTXee"
+        id="email"
+        name="email"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      class="sc-AxmLO MKJBh"
+    >
+      <div
+        class="sc-AxjAm cKYGmA sc-AxhUy sc-AxheI bKIvqT"
+      >
+        <label
+          class="sc-AxirZ ktnnZK"
+          for="name"
+        >
+          Name*
+        </label>
+        <input
+          class="sc-AxiKw bOTXee"
+          id="name"
+          name="name"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-AxjAm cKYGmA sc-AxhUy sc-AxheI bKIvqT"
+      >
+        <label
+          class="sc-AxirZ ktnnZK"
+          for="company"
+        >
+          Company
+        </label>
+        <input
+          class="sc-AxiKw bOTXee"
+          id="company"
+          name="company"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="sc-AxjAm cKYGmA sc-AxhUy sc-AxgMl sc-Axmtr gOckeQ"
+    >
+      <label
+        class="sc-AxirZ ktnnZK"
+        for="body"
+      >
+        Message*
+      </label>
+      <textarea
+        class="sc-AxiKw bOTXee"
+        id="body"
+        name="body"
+        placeholder="Hi Phil,
+
+Hope you're having a great day!
+
+Listen to this really exciting project you could contribute to:"
+      />
+    </div>
+    <div
+      class="sc-AxmLO MKJBh"
+    >
+      <button
+        class="sc-fzozJi BUFJz"
+        type="submit"
+      >
+        Submit
+      </button>
+      <div
+        class="sc-fzoLsD fEAUgY"
+      >
+        *Required field
+      </div>
+    </div>
+  </form>
+</div>
+`;
