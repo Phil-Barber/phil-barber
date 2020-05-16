@@ -54,14 +54,16 @@ export const Post = ({ fields, frontmatter, excerpt }) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
-    <div ref={hoverRef}>
-      <PostContainer>
+    <div ref={hoverRef} data-testid="post-hover-div">
+      <PostContainer data-testid="post-container">
         <StyledLink to={fields.slug}>
           <h3>
             {frontmatter.title}
             <Date> — {frontmatter.dateCompleted}</Date>
           </h3>
-          <Excerpt isHovered={isHovered}>{excerpt}</Excerpt>
+          <Excerpt isHovered={isHovered} data-testid="excerpt">
+            {excerpt}
+          </Excerpt>
         </StyledLink>
       </PostContainer>
     </div>
