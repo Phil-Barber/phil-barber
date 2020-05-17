@@ -1,11 +1,11 @@
 import React from 'react';
-import PageWrapper from '../components/pageWrapper';
+import { FullWidthWrapper } from '../components/pageWrapper';
 import { PageLayout } from '../components/styled';
 import { ContactForm } from '../components/contactForm';
 import SEO from '../components/seo';
 
 export const Contact = () => (
-  <PageWrapper>
+  <FullWidthWrapper>
     <PageLayout>
       <SEO title="contact" description="Get in contact with me" />
       <h1>Get In Touch!</h1>
@@ -16,7 +16,7 @@ export const Contact = () => (
       </p>
       <ContactForm />
     </PageLayout>
-  </PageWrapper>
+  </FullWidthWrapper>
 );
 
 export default Contact;

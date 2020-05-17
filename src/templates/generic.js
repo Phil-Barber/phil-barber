@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PageWrapper from '../components/pageWrapper';
+import { FullWidthWrapper } from '../components/pageWrapper';
 import SEO from '../components/seo';
 import { graphql } from 'gatsby';
 
@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 export const Generic = ({ data }) => (
-  <PageWrapper>
+  <FullWidthWrapper>
     <SEO
       title={data.markdownRemark.frontmatter.title}
       description={data.markdownRemark.export}
@@ -20,7 +20,7 @@ export const Generic = ({ data }) => (
       <h1>{data.markdownRemark.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Container>
-  </PageWrapper>
+  </FullWidthWrapper>
 );
 
 export default Generic;

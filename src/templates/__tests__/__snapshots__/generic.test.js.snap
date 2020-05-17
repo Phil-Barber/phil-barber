@@ -10,44 +10,47 @@ exports[`Generic Matches snapshot 1`] = `
       style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3D(0, 0, 0);"
     >
       <div
-        class="sc-AxjAm cnLZhI"
+        class="sc-AxjAm fEzfgO"
       >
         <a
-          class="sc-AxiKw fumOHP"
+          class="sc-AxhUy bILkkK"
           href="/"
         >
           <h1>
             Test title
           </h1>
         </a>
-      </div>
-      <div
-        class="sc-AxirZ cNXLpB"
-      >
-        <a
-          class="sc-AxiKw sc-AxhCb diJFct"
-          href="/contact/"
+        <span
+          class="sc-AxirZ gtVPNy"
+          style="transform: rotate(0deg);"
         >
-          Contact
-        </a>
+          &gt;
+        </span>
       </div>
     </div>
   </div>
   <div
-    class="sc-AxhUy dVjWHs"
+    class="sc-AxiKw jmqPVm sc-Axmtr eNspVD"
   >
     <div
-      class="sc-AxgMl gdmPPa"
+      class="sc-AxheI gPjnvY"
     >
-      <h1>
-        Title
-      </h1>
-      <div>
+      <div
+        class="sc-AxmLO bIlwlq"
+      >
+        <h1>
+          Title
+        </h1>
         <div>
-          Test Page
+          <div>
+            Test Page
+          </div>
         </div>
       </div>
     </div>
+    <div
+      class="sc-AxhCb jDuQaB"
+    />
   </div>
 </div>
 `;
