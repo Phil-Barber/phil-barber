@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTransition, config } from 'react-spring';
 import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
-import { Post } from '../components/post';
+import { AnimatedPost } from '../components/post';
 
 const Container = styled.div`
   display: flex;
@@ -50,56 +51,67 @@ const PostsCount = styled.span`
   font-size: 22px;
 `;
 
-export const Main = ({ data }) => (
-  <PageWrapper>
-    <SEO title="Phil Barber" description="Homepage" />
-    <Container>
-      <AboutColumn>
-        <AboutText>
-          <h1>Look! It&apos;s a website all about me</h1>
-          <p>
-            Impressive and confusing that you&apos;ve ended up here. Not much to
-            see yet.
-          </p>
-          <p>
-            This is a work in progess site, beginning as a 100 days of{' '}
-            <a href="https://www.gatsbyjs.org/blog/tags/100-days-of-gatsby/">
-              Gatsby
-            </a>{' '}
-            project. You can find recent books and films I&apos;ve been
-            enjoying, perhaps more in the future.
-          </p>
-          <p>
-            I use vim and don&apos;t have a spell checker. Couple that with my
-            horrendous spelling and you&apos;ll be sure to find a few (many)
-            spelling errors. Feel free to open a{' '}
-            <a href="https://github.com/Phil-Barber/phil-barber/">PR</a>!
-          </p>
-          <p>
-            I won&apos;t be offended that you&apos;ve already noticed that
-            I&apos;m definitely <strong>not</strong> a designer. I did my best
-            with the colours OK, I&apos;d appreciate it if we could just leave
-            it at that.
-          </p>
-          <p>
-            Full disclosure: this is a work in progress and you shouldn&apos;t
-            expect most (if any) of these links to actualy work.
-          </p>
-          <p>Thanks for stopping by!</p>
-        </AboutText>
-      </AboutColumn>
-      <PostsColumn>
-        <PostsTitle>
-          <h1>Posts</h1>
-          <PostsCount>Total: {data.allMarkdownRemark.totalCount}</PostsCount>
-        </PostsTitle>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Post key={node.id} {...node} />
-        ))}
-      </PostsColumn>
-    </Container>
-  </PageWrapper>
-);
+export const Main = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges;
+  const transitions = useTransition(posts, ({ node }) => node.id, {
+    unique: true,
+    trail: 1000 / posts.length,
+    from: { opacity: 0, transform: 'translate3d(0, 100px, 0)' },
+    enter: { opacity: 1, transform: 'translate3d(0, 0px, 0)' },
+    config: config.gentle,
+  });
+
+  return (
+    <PageWrapper>
+      <SEO title="Phil Barber" description="Homepage" />
+      <Container>
+        <AboutColumn>
+          <AboutText>
+            <h1>Look! It&apos;s a website all about me</h1>
+            <p>
+              Impressive and confusing that you&apos;ve ended up here. Not much
+              to see yet.
+            </p>
+            <p>
+              This is a work in progess site, beginning as a 100 days of{' '}
+              <a href="https://www.gatsbyjs.org/blog/tags/100-days-of-gatsby/">
+                Gatsby
+              </a>{' '}
+              project. You can find recent books and films I&apos;ve been
+              enjoying, perhaps more in the future.
+            </p>
+            <p>
+              I use vim and don&apos;t have a spell checker. Couple that with my
+              horrendous spelling and you&apos;ll be sure to find a few (many)
+              spelling errors. Feel free to open a{' '}
+              <a href="https://github.com/Phil-Barber/phil-barber/">PR</a>!
+            </p>
+            <p>
+              I won&apos;t be offended that you&apos;ve already noticed that
+              I&apos;m definitely <strong>not</strong> a designer. I did my best
+              with the colours OK, I&apos;d appreciate it if we could just leave
+              it at that.
+            </p>
+            <p>
+              Full disclosure: this is a work in progress and you shouldn&apos;t
+              expect most (if any) of these links to actualy work.
+            </p>
+            <p>Thanks for stopping by!</p>
+          </AboutText>
+        </AboutColumn>
+        <PostsColumn>
+          <PostsTitle>
+            <h1>Posts</h1>
+            <PostsCount>Total: {data.allMarkdownRemark.totalCount}</PostsCount>
+          </PostsTitle>
+          {transitions.map(({ item, key, props }) => (
+            <AnimatedPost key={key} {...item.node} style={props} />
+          ))}
+        </PostsColumn>
+      </Container>
+    </PageWrapper>
+  );
+};
 
 export default Main;
 

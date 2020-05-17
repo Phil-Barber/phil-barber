@@ -1,4 +1,5 @@
 import React from 'react';
+import { animated } from 'react-spring';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { useHover } from '../hooks/useHover';
@@ -69,11 +70,11 @@ const getEmoji = (slug) => {
   return '⌨️';
 };
 
-export const Post = ({ fields, frontmatter, excerpt }) => {
+export const Post = ({ fields, frontmatter, excerpt, style }) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
-    <div ref={hoverRef} data-testid="post-hover-div">
+    <div ref={hoverRef} data-testid="post-hover-div" style={style}>
       <PostContainer data-testid="post-container">
         <StyledLink to={fields.slug}>
           <h3>
@@ -88,3 +89,5 @@ export const Post = ({ fields, frontmatter, excerpt }) => {
     </div>
   );
 };
+
+export const AnimatedPost = animated(Post);

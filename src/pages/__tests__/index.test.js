@@ -4,7 +4,8 @@ import { Main } from '../index';
 import * as post from '../../components/post';
 
 describe('Main', () => {
-  jest.spyOn(post, 'Post').mockImplementation(() => <div>Mock Post</div>);
+  const mockPost = () => <div>Mock Post</div>;
+  post.AnimatedPost = mockPost;
 
   it('Matches snapshot', () => {
     const { container } = render(
