@@ -156,7 +156,7 @@ const PageWrapper = ({ className, children }) => {
       </Headroom>
       <Body className={className}>
         <ContentContainer>{children}</ContentContainer>
-        <Sidebar style={sidebarAnimation} isOpen={isSidebarOpen}>
+        <Sidebar style={sidebarAnimation}>
           {transitions.map(({ item, key, props }) => (
             <NavLink key={key} {...item} style={props}>
               {item.children}
