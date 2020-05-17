@@ -1,5 +1,6 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const { isFilmSlug, isBookSlug } = require('./src/utils');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -31,11 +32,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const templateMap = [
     {
-      regex: /\/films\//,
+      check: isFilmSlug,
       template: './src/templates/film.js',
     },
     {
-      regex: /\/books\//,
+      check: isBookSlug,
       template: './src/templates/book.js',
     },
   ];
@@ -44,8 +45,8 @@ exports.createPages = async ({ graphql, actions }) => {
     const slug = node.fields.slug;
     let matched = false;
     for (let i = 0; i < templateMap.length; i++) {
-      const { regex, template } = templateMap[i];
-      if (regex.test(slug)) {
+      const { check, template } = templateMap[i];
+      if (check(slug)) {
         matched = true;
         createPage({
           path: slug,

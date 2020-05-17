@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { useHover } from '../hooks/useHover';
+import { isFilmSlug, isBookSlug } from '../utils';
 
 const PostContainer = styled.div`
   padding: ${({ theme }) => theme.spacing.xxSmall};
@@ -50,6 +51,24 @@ const Date = styled.span`
   color: #667269;
 `;
 
+const getEmoji = (slug) => {
+  const emojiMap = [
+    {
+      check: isFilmSlug,
+      emoji: '🍿',
+    },
+    {
+      check: isBookSlug,
+      emoji: '📚',
+    },
+  ];
+  for (let i = 0; i < emojiMap.length; i++) {
+    const { check, emoji } = emojiMap[i];
+    if (check(slug)) return emoji;
+  }
+  return '⌨️';
+};
+
 export const Post = ({ fields, frontmatter, excerpt }) => {
   const [hoverRef, isHovered] = useHover();
 
@@ -58,7 +77,7 @@ export const Post = ({ fields, frontmatter, excerpt }) => {
       <PostContainer data-testid="post-container">
         <StyledLink to={fields.slug}>
           <h3>
-            {frontmatter.title}
+            {getEmoji(fields.slug)} {frontmatter.title}
             <Date> — {frontmatter.dateCompleted}</Date>
           </h3>
           <Excerpt isHovered={isHovered} data-testid="excerpt">
