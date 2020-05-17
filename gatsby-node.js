@@ -57,6 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
     if (!matched) {
+      console.log(slug);
       createPage({
         path: slug,
         component: path.resolve('./src/templates/generic.js'),
