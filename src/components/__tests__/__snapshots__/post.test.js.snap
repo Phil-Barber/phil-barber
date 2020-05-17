@@ -55,6 +55,8 @@ exports[`Post matches snapshot 1`] = `
         href="slug"
       >
         <h3>
+          ⌨️
+           
           Test title
           <span
             class="c2"
