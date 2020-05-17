@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSpring, a, config } from 'react-spring';
 import styled from 'styled-components';
 import Headroom from 'react-headroom';
 import { useStaticQuery, Link, graphql } from 'gatsby';
@@ -16,25 +17,19 @@ const MainHeader = styled.div`
   }
 `;
 
-const Arrow = styled.span`
+const Arrow = styled(a.span)`
   font-size: 30px;
   font-weight: 600;
   margin-right: ${({ theme }) => theme.spacing.xLarge};
   cursor: pointer;
   user-select: none;
-
-  ${({ isSidebarOpen }) =>
-    isSidebarOpen &&
-    `
-    transform: rotate(90deg);
-  `};
 `;
 
 const Body = styled.div`
   display: flex;
 `;
 
-const Sidebar = styled.div`
+const Sidebar = styled(a.div)`
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.primary};
 
@@ -43,11 +38,10 @@ const Sidebar = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 250px;
   box-sizing: border-box;
-  padding: 0 18px;
   overflow: scroll;
   box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.24);
+  ${({ isOpen }) => isOpen && `padding: 0 18px;`}
 `;
 
 const StyledLink = styled(Link)`
@@ -65,7 +59,7 @@ const NavLink = styled(StyledLink)`
   }
 `;
 
-const ContentContainer = styled.div`
+export const ContentContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.tertiary};
   color: ${({ theme }) => theme.colors.secondary};
   padding: ${({ theme }) => theme.spacing.normal};
@@ -79,7 +73,7 @@ const ContentContainer = styled.div`
   }
 `;
 
-const PageWrapper = ({ children }) => {
+const PageWrapper = ({ className, children }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -93,8 +87,17 @@ const PageWrapper = ({ children }) => {
   );
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
+  const arrowRotation = useSpring({
+    transform: `rotate(${isSidebarOpen ? 90 : 0}deg)`,
+    config: config.stiff,
+  });
+
+  const sidebarAnimation = useSpring({
+    width: isSidebarOpen ? '300px' : '0px',
+    config: config.stiff,
+  });
 
   return (
     <>
@@ -103,18 +106,16 @@ const PageWrapper = ({ children }) => {
           <StyledLink to={'/'}>
             <h1>{data.site.siteMetadata.title}</h1>
           </StyledLink>
-          <Arrow isSidebarOpen={isSidebarOpen} onClick={toggleSidebar}>
+          <Arrow style={arrowRotation} onClick={toggleSidebar}>
             &gt;
           </Arrow>
         </MainHeader>
       </Headroom>
-      <Body>
+      <Body className={className}>
         <ContentContainer>{children}</ContentContainer>
-        {isSidebarOpen && (
-          <Sidebar>
-            <NavLink to={'/contact/'}>Contact</NavLink>
-          </Sidebar>
-        )}
+        <Sidebar style={sidebarAnimation} isOpen={isSidebarOpen}>
+          <NavLink to={'/contact/'}>Contact</NavLink>
+        </Sidebar>
       </Body>
     </>
   );
