@@ -24,6 +24,8 @@ const SecondaryHeader = styled.div`
   `};
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  height: 36px;
 `;
 
 const StyledLink = styled(Link)`
@@ -31,8 +33,14 @@ const StyledLink = styled(Link)`
 `;
 
 const NavLink = styled(StyledLink)`
+  width: 80px;
   font-size: 18px;
   color: ${({ theme }) => theme.colors.primary};
+  transition: font-size 0.5s ease, font-weight 0.5s ease;
+
+  :hover {
+    font-size: 20px;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -71,9 +79,7 @@ const PageWrapper = ({ children }) => {
           </StyledLink>
         </MainHeader>
         <SecondaryHeader>
-          <NavLink to={'/contact/'}>
-            <div>Contact</div>
-          </NavLink>
+          <NavLink to={'/contact/'}>Contact</NavLink>
         </SecondaryHeader>
       </Headroom>
       <ContentContainer>{children}</ContentContainer>
