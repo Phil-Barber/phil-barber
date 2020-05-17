@@ -48,7 +48,6 @@ const ContentContainer = styled.div`
   color: ${({ theme }) => theme.colors.secondary};
   padding: ${({ theme }) => theme.spacing.normal};
   text-align: justify;
-  height: 100vh;
 
   h1,
   h2,
