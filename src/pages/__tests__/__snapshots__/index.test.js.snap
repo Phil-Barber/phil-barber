@@ -36,13 +36,13 @@ exports[`Main Matches snapshot 1`] = `
       class="sc-AxheI gPjnvY"
     >
       <div
-        class="sc-fzpans ggCSDz"
+        class="sc-fzplWN gAOvfG"
       >
         <div
-          class="sc-fzplWN sc-fznyAO loLUHS"
+          class="sc-fznyAO sc-fznKkj bLrzVH"
         >
           <div
-            class="sc-fznKkj hSNLAw"
+            class="sc-fznZeY iqMzhg"
           >
             <h1>
               Look! It's a website all about me
@@ -87,16 +87,16 @@ exports[`Main Matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-fzplWN sc-fznZeY ksWrla"
+          class="sc-fznyAO sc-fzokOt kmuJKB"
         >
           <div
-            class="sc-fzokOt jFIskB"
+            class="sc-fzqBZW fNVHmc"
           >
             <h1>
               Posts
             </h1>
             <span
-              class="sc-fzqBZW iCOTzu"
+              class="sc-fzqNJr TZybT"
             >
               Total: 
               2
@@ -112,16 +112,8 @@ exports[`Main Matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-AxhCb hiaasQ"
-      style="width: 0px;"
-    >
-      <a
-        class="sc-AxhUy sc-AxgMl bPxeHq"
-        href="/contact/"
-      >
-        Contact
-      </a>
-    </div>
+      class="sc-AxhCb jDuQaB"
+    />
   </div>
 </div>
 `;

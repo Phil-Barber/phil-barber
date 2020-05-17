@@ -49,16 +49,8 @@ exports[`Generic Matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-AxhCb hiaasQ"
-      style="width: 0px;"
-    >
-      <a
-        class="sc-AxhUy sc-AxgMl bPxeHq"
-        href="/contact/"
-      >
-        Contact
-      </a>
-    </div>
+      class="sc-AxhCb jDuQaB"
+    />
   </div>
 </div>
 `;
