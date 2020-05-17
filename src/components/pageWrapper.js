@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Headroom from 'react-headroom';
 import { useStaticQuery, Link, graphql } from 'gatsby';
 
 const MainHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+
   background-color: ${({ theme }) => theme.colors.primary};
   padding: ${({ theme }) => `${theme.spacing.xxSmall} ${theme.spacing.normal}`};
 
@@ -13,19 +16,38 @@ const MainHeader = styled.div`
   }
 `;
 
-const SecondaryHeader = styled.div`
+const Arrow = styled.span`
+  font-size: 30px;
+  font-weight: 600;
+  margin-right: ${({ theme }) => theme.spacing.xLarge};
+  cursor: pointer;
+  user-select: none;
+
+  ${({ isSidebarOpen }) =>
+    isSidebarOpen &&
+    `
+    transform: rotate(90deg);
+  `};
+`;
+
+const Body = styled.div`
+  display: flex;
+`;
+
+const Sidebar = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.primary};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.tertiary};
-  padding: ${({ theme }) => `
-    ${theme.spacing.xxSmall} 
-    ${theme.spacing.large}
-    ${theme.spacing.xxxSmall}
-  `};
+
+  margin-left: auto;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
   align-items: center;
-  height: 36px;
+  justify-content: center;
+  min-width: 250px;
+  box-sizing: border-box;
+  padding: 0 18px;
+  overflow: scroll;
+  box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.24);
 `;
 
 const StyledLink = styled(Link)`
@@ -69,6 +91,11 @@ const PageWrapper = ({ children }) => {
       }
     `
   );
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
   return (
     <>
       <Headroom>
@@ -76,12 +103,19 @@ const PageWrapper = ({ children }) => {
           <StyledLink to={'/'}>
             <h1>{data.site.siteMetadata.title}</h1>
           </StyledLink>
+          <Arrow isSidebarOpen={isSidebarOpen} onClick={toggleSidebar}>
+            &gt;
+          </Arrow>
         </MainHeader>
-        <SecondaryHeader>
-          <NavLink to={'/contact/'}>Contact</NavLink>
-        </SecondaryHeader>
       </Headroom>
-      <ContentContainer>{children}</ContentContainer>
+      <Body>
+        <ContentContainer>{children}</ContentContainer>
+        {isSidebarOpen && (
+          <Sidebar>
+            <NavLink to={'/contact/'}>Contact</NavLink>
+          </Sidebar>
+        )}
+      </Body>
     </>
   );
 };
