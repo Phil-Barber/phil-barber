@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { useTransition, config } from 'react-spring';
+import { a, useSpring, useTransition, config } from 'react-spring';
 import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
@@ -52,7 +52,7 @@ const AboutColumn = styled(Column)`
   }
 `;
 
-const AboutText = styled.div`
+const AboutText = styled(a.div)`
   ${centerLayout}
 `;
 
@@ -70,11 +70,20 @@ const PostsCount = styled.span`
 export const Main = ({ data }) => {
   const aboutContent = data.markdownRemark;
   const posts = data.allMarkdownRemark.edges;
+
+  const glideIn = {
+    from: { opacity: 0, transform: 'translate3d(0, 100px, 0)' },
+    enter: { opacity: 1, transform: 'translate3d(0, 0px, 0)' },
+  };
+
+  const entranceAnimation = useSpring({
+    ...glideIn,
+    to: glideIn.enter,
+  });
   const transitions = useTransition(posts, ({ node }) => node.id, {
     unique: true,
     trail: 1000 / posts.length,
-    from: { opacity: 0, transform: 'translate3d(0, 100px, 0)' },
-    enter: { opacity: 1, transform: 'translate3d(0, 0px, 0)' },
+    ...glideIn,
     config: config.gentle,
   });
 
@@ -83,11 +92,14 @@ export const Main = ({ data }) => {
       <SEO title="Phil Barber" description="Homepage" />
       <Container>
         <AboutColumn>
-          <AboutText dangerouslySetInnerHTML={{ __html: aboutContent.html }} />
+          <AboutText
+            style={entranceAnimation}
+            dangerouslySetInnerHTML={{ __html: aboutContent.html }}
+          />
         </AboutColumn>
         <PostsColumn>
           <PostsTitle>
-            <h1>Posts</h1>
+            <a.h1 style={entranceAnimation}>Posts</a.h1>
             <PostsCount>Total: {data.allMarkdownRemark.totalCount}</PostsCount>
           </PostsTitle>
           {transitions.map(({ item, key, props }) => (

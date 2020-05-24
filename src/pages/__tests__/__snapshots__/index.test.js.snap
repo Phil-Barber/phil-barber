@@ -43,6 +43,7 @@ exports[`Main Matches snapshot 1`] = `
         >
           <div
             class="sc-fzokOt cIzEVk"
+            style="opacity: 0; transform: translate3d(0, 100px, 0);"
           >
             <div>
               Test About Content
@@ -55,7 +56,9 @@ exports[`Main Matches snapshot 1`] = `
           <div
             class="sc-fzqBZW fNVHmc"
           >
-            <h1>
+            <h1
+              style="opacity: 0; transform: translate3d(0, 100px, 0);"
+            >
               Posts
             </h1>
             <span
