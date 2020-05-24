@@ -45,7 +45,7 @@ export const InfoColumn = styled(Column)`
   background-color: ${({ theme }) => theme.colors.secondary};
 
   @media (max-width: 1150px) {
-    flex-direction: column;
+    display: block;
 
     ${Poster} {
       width: 100%;
