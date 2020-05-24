@@ -29,6 +29,19 @@ export const FilmTemplate = ({ data }) => {
     <Review
       imageFluid={featuredImgFluid}
       details={details}
+      extraDetail={
+        <>
+          See all my film ratings on{' '}
+          <a
+            href="https://www.imdb.com/user/ur46443696/ratings?ref_=nv_usr_rt_4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            IMDB
+          </a>
+          .
+        </>
+      }
       title={post.frontmatter.title}
       description={post.frontmatter.excerpt}
     >

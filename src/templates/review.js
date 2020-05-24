@@ -19,14 +19,18 @@ export const Review = ({
   title,
   description,
   children,
+  extraDetail,
 }) => {
   return (
     <PageWrapper>
       <SEO title={title} description={description} />
       <S.Container>
         <S.InfoColumn>
-          <S.Poster fluid={imageFluid} imgStyle={{ objectFit: 'contain' }} />
-          <Details key="details" details={details} />
+          <S.InfoHeader>
+            <S.Poster fluid={imageFluid} imgStyle={{ objectFit: 'contain' }} />
+            <Details key="details" details={details} />
+          </S.InfoHeader>
+          <S.ExtraInfo>{extraDetail}</S.ExtraInfo>
         </S.InfoColumn>
         <S.ContentColumn>
           <div>

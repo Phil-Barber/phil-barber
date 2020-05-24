@@ -37,12 +37,22 @@ export const Attr = styled.strong`
 
 export const InfoColumn = styled(Column)`
   margin-top: ${({ theme }) => theme.spacing.large};
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
   flex-grow: 5;
   flex-basis: 200px;
+`;
+
+export const DetailsContainer = styled.div`
+  padding: ${({ theme }) => theme.spacing.normal};
+  flex-grow: 1;
+  flex-basis: 100px;
+`;
+
+export const InfoHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: ${({ theme }) => theme.colors.secondary};
 
   @media (max-width: 1150px) {
     display: block;
@@ -57,9 +67,6 @@ export const InfoColumn = styled(Column)`
   }
 `;
 
-export const DetailsContainer = styled.div`
-  padding: ${({ theme }) => theme.spacing.normal};
-  flex-grow: 1;
-  flex-basis: 100px;
-  color: ${({ theme }) => theme.colors.primary};
+export const ExtraInfo = styled.div`
+  margin-top: ${({ theme }) => theme.spacing.normal};
 `;

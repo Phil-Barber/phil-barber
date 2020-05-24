@@ -15,7 +15,7 @@ exports[`TextInput Matches snapshot 1`] = `
         test label
       </label>
       <input
-        class="sc-AxiKw bOTXee"
+        class="sc-AxiKw hSLCUF"
         id="test-input"
         name="test-input"
         value=""

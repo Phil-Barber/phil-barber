@@ -22,6 +22,20 @@ exports[`FilmTemplate Matches snapshot 1`] = `
       },
     ]
   }
+  extraDetail={
+    <React.Fragment>
+      See all my film ratings on
+       
+      <a
+        href="https://www.imdb.com/user/ur46443696/ratings?ref_=nv_usr_rt_4"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        IMDB
+      </a>
+      .
+    </React.Fragment>
+  }
   imageFluid="ImageFluid"
   title="FilmTemplate title"
 >
