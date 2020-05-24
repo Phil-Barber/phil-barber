@@ -1,6 +1,6 @@
 ---
 title: "American Hustle"
-date: "2013"
+released: "2013"
 dateCompleted: "2020-05-22"
 featuredImage: ../../images/films/american_hustle.jpg
 director: ["David O. Russell"]

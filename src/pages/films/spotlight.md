@@ -1,6 +1,6 @@
 ---
 title: "Spotlight"
-date: "2015"
+released: "2015"
 dateCompleted: "2020-02-05"
 featuredImage: ../../images/films/spotlight.jpg
 director: ["Tom McCarthy"]
