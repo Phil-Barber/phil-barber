@@ -133,13 +133,19 @@ const PageWrapper = ({ className, children }) => {
       trail: 400 / listItems.length,
       from: { opacity: 0, transform: 'scale(0)' },
       enter: { opacity: 1, transform: 'scale(1)' },
-      leave: { opacity: 0, transform: 'scale(0)' },
+      leave: {
+        opacity: 0,
+        transform: 'scale(0)',
+        'max-width': 0,
+        padding: 0,
+        margin: 0,
+      },
     }
   );
 
   useChain(
     isSidebarOpen ? [sidebarRef, transitionRef] : [transitionRef, sidebarRef],
-    [0, 0.3]
+    isSidebarOpen ? [0, 0.3] : [0, 0.8]
   );
 
   return (
