@@ -173,6 +173,6 @@ export default PageWrapper;
 export const FullWidthWrapper = styled(PageWrapper)`
   ${ContentContainer} {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
   }
 `;

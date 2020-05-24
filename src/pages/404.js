@@ -6,7 +6,7 @@ import { PageLayout } from '../components/styled';
 const Content = styled.div`
   font-size: 40px;
   font-weight: 600;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const HomeLink = styled.a`

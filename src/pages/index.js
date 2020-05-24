@@ -29,10 +29,10 @@ const Container = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
 
   @media ${twoColumnMinWidth} {
-    width: 100vw;
+    min-width: 100vw;
     flex-direction: column;
     height: unset;
 
