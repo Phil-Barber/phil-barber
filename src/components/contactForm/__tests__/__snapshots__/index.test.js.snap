@@ -23,7 +23,7 @@ exports[`ContactForm matches snapshot 1`] = `
         Email Address*
       </label>
       <input
-        class="sc-AxiKw bOTXee"
+        class="sc-AxiKw hSLCUF"
         id="email"
         name="email"
         type="email"
@@ -34,7 +34,7 @@ exports[`ContactForm matches snapshot 1`] = `
       class="sc-AxmLO MKJBh"
     >
       <div
-        class="sc-AxjAm cKYGmA sc-AxhUy sc-AxheI bKIvqT"
+        class="sc-AxjAm cKYGmA sc-AxhUy sc-AxheI ickILg"
       >
         <label
           class="sc-AxirZ ktnnZK"
@@ -43,7 +43,7 @@ exports[`ContactForm matches snapshot 1`] = `
           Name*
         </label>
         <input
-          class="sc-AxiKw bOTXee"
+          class="sc-AxiKw hSLCUF"
           id="name"
           name="name"
           type="text"
@@ -51,7 +51,7 @@ exports[`ContactForm matches snapshot 1`] = `
         />
       </div>
       <div
-        class="sc-AxjAm cKYGmA sc-AxhUy sc-AxheI bKIvqT"
+        class="sc-AxjAm cKYGmA sc-AxhUy sc-AxheI hJYnlL"
       >
         <label
           class="sc-AxirZ ktnnZK"
@@ -60,7 +60,7 @@ exports[`ContactForm matches snapshot 1`] = `
           Company
         </label>
         <input
-          class="sc-AxiKw bOTXee"
+          class="sc-AxiKw hSLCUF"
           id="company"
           name="company"
           type="text"
@@ -78,7 +78,7 @@ exports[`ContactForm matches snapshot 1`] = `
         Message*
       </label>
       <textarea
-        class="sc-AxiKw bOTXee"
+        class="sc-AxiKw hSLCUF"
         id="body"
         name="body"
         placeholder="Hi Phil,

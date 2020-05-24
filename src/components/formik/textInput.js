@@ -7,7 +7,9 @@ export const InputContainer = styled.div`
 `;
 
 export const Label = styled.label``;
-export const Input = styled.input``;
+export const Input = styled.input`
+  width: 100%;
+`;
 export const Error = styled.div`
   color: red;
 `;
