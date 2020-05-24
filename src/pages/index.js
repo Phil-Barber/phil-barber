@@ -1,20 +1,46 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { useTransition, config } from 'react-spring';
 import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
 import { AnimatedPost } from '../components/post';
+import { twoColumnMinWidth } from '../style';
+
+const Column = styled.div`
+  padding: ${({ theme }) => theme.spacing.normal};
+`;
+
+const centerLayout = css`
+  margin: auto;
+  max-width: 640px;
+`;
+
+const PostsColumn = styled(Column)`
+  flex-grow: 5;
+  flex-basis: 200px;
+
+  h3 {
+    margin-bottom: ${({ theme }) => theme.spacing.xxSmall};
+  }
+`;
 
 const Container = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   height: 100vh;
-`;
 
-const Column = styled.div`
-  padding: ${({ theme }) => theme.spacing.normal};
+  @media ${twoColumnMinWidth} {
+    width: 100vw;
+    flex-direction: column;
+    height: unset;
+
+    ${PostsColumn} {
+      ${centerLayout}
+      padding: 0;
+    }
+  }
 `;
 
 const AboutColumn = styled(Column)`
@@ -27,17 +53,7 @@ const AboutColumn = styled(Column)`
 `;
 
 const AboutText = styled.div`
-  margin: auto;
-  max-width: 640px;
-`;
-
-const PostsColumn = styled(Column)`
-  flex-grow: 5;
-  flex-basis: 200px;
-
-  h3 {
-    margin-bottom: ${({ theme }) => theme.spacing.xxSmall};
-  }
+  ${centerLayout}
 `;
 
 const PostsTitle = styled.div`
