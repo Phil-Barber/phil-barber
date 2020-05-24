@@ -27,3 +27,8 @@ export const theme = {
 };
 
 export const twoColumnMinWidth = '(max-width: 1024px)';
+
+export const glideIn = {
+  from: { opacity: 0, transform: 'translate3d(0, 100px, 0)' },
+  to: { opacity: 1, transform: 'translate3d(0, 0px, 0)' },
+};

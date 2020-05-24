@@ -1,7 +1,9 @@
 import React from 'react';
+import { useSpring, a } from 'react-spring';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
 import * as S from './review.styled';
+import { glideIn } from '../style';
 
 const Details = ({ details }) => (
   <S.DetailsContainer>
@@ -21,11 +23,16 @@ export const Review = ({
   children,
   extraDetail,
 }) => {
+  const infoEntrance = useSpring({
+    from: { opacity: 0, transform: 'translate3d(-200px, 0, 0)' },
+    to: { opacity: 1, transform: 'translate3d(0px, 0, 0)' },
+  });
+  const contentEntrance = useSpring(glideIn);
   return (
     <PageWrapper>
       <SEO title={title} description={description} />
       <S.Container>
-        <S.InfoColumn>
+        <S.InfoColumn style={infoEntrance}>
           <S.InfoHeader>
             <S.Poster fluid={imageFluid} imgStyle={{ objectFit: 'contain' }} />
             <Details key="details" details={details} />
@@ -33,10 +40,10 @@ export const Review = ({
           <S.ExtraInfo>{extraDetail}</S.ExtraInfo>
         </S.InfoColumn>
         <S.ContentColumn>
-          <div>
+          <a.div style={contentEntrance}>
             <h1>{title}</h1>
             {children}
-          </div>
+          </a.div>
         </S.ContentColumn>
       </S.Container>
     </PageWrapper>

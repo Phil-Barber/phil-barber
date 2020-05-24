@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 import Img from 'gatsby-image';
 
 export const Container = styled.div`
@@ -35,7 +36,7 @@ export const Attr = styled.strong`
   font-weight: 600;
 `;
 
-export const InfoColumn = styled(Column)`
+export const InfoColumn = styled(animated(Column))`
   margin-top: ${({ theme }) => theme.spacing.large};
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.primary};

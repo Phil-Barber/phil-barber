@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
 import { AnimatedPost } from '../components/post';
-import { twoColumnMinWidth } from '../style';
+import { twoColumnMinWidth, glideIn } from '../style';
 
 const Column = styled.div`
   padding: ${({ theme }) => theme.spacing.normal};
@@ -71,19 +71,12 @@ export const Main = ({ data }) => {
   const aboutContent = data.markdownRemark;
   const posts = data.allMarkdownRemark.edges;
 
-  const glideIn = {
-    from: { opacity: 0, transform: 'translate3d(0, 100px, 0)' },
-    enter: { opacity: 1, transform: 'translate3d(0, 0px, 0)' },
-  };
-
-  const entranceAnimation = useSpring({
-    ...glideIn,
-    to: glideIn.enter,
-  });
+  const entranceAnimation = useSpring(glideIn);
   const transitions = useTransition(posts, ({ node }) => node.id, {
     unique: true,
     trail: 1000 / posts.length,
     ...glideIn,
+    enter: glideIn.to,
     config: config.gentle,
   });
 

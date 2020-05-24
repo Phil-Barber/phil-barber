@@ -39,7 +39,8 @@ exports[`Review Matches snapshot 1`] = `
         class="sc-AxmLO gAkYvz"
       >
         <div
-          class="sc-fzozJi sc-fznKkj hKZUIL"
+          class="sc-fzozJi caoJEJ sc-fznKkj gbcwNl"
+          style="opacity: 0; transform: translate3d(-200px, 0, 0);"
         >
           <div
             class="sc-fzokOt fbCyFV"
@@ -100,7 +101,9 @@ exports[`Review Matches snapshot 1`] = `
         <div
           class="sc-fzozJi sc-fzoLsD jwyEOV"
         >
-          <div>
+          <div
+            style="opacity: 0; transform: translate3d(0, 100px, 0);"
+          >
             <h1>
               Test title
             </h1>
