@@ -19,6 +19,22 @@ export const ContentColumn = styled(Column)`
   margin-right: ${({ theme }) => theme.spacing.xxxLarge};
 `;
 
+export const Poster = styled(Img)`
+  flex-basis: 200px;
+  flex-grow: 1;
+`;
+
+export const Detail = styled.span`
+  display: block;
+  margin-bottom: ${({ theme }) => theme.spacing.xSmall};
+  text-align: left;
+`;
+
+export const Attr = styled.strong`
+  display: block;
+  font-weight: 600;
+`;
+
 export const InfoColumn = styled(Column)`
   margin-top: ${({ theme }) => theme.spacing.large};
   flex-grow: 5;
@@ -27,11 +43,18 @@ export const InfoColumn = styled(Column)`
   justify-content: space-between;
   align-items: flex-start;
   background-color: ${({ theme }) => theme.colors.secondary};
-`;
 
-export const Poster = styled(Img)`
-  flex-basis: 200px;
-  flex-grow: 1;
+  @media (max-width: 1150px) {
+    flex-direction: column;
+
+    ${Poster} {
+      width: 100%;
+    }
+
+    ${Attr} {
+      display: inline;
+    }
+  }
 `;
 
 export const DetailsContainer = styled.div`
@@ -39,15 +62,4 @@ export const DetailsContainer = styled.div`
   flex-grow: 1;
   flex-basis: 100px;
   color: ${({ theme }) => theme.colors.primary};
-`;
-
-export const Detail = styled.span`
-  display: block;
-  margin-bottom: ${({ theme }) => theme.spacing.xSmall};
-  text-align: left;
-
-  strong {
-    display: block;
-    font-weight: 600;
-  }
 `;

@@ -39,10 +39,10 @@ exports[`Review Matches snapshot 1`] = `
         class="sc-AxmLO iaLYmk"
       >
         <div
-          class="sc-fzozJi sc-fzpans fNCGum"
+          class="sc-fzozJi sc-fznKkj jtwzMB"
         >
           <div
-            class="sc-fzplWN hNmndR gatsby-image-wrapper"
+            class="sc-fzpans iiysSo gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -62,12 +62,14 @@ exports[`Review Matches snapshot 1`] = `
             </noscript>
           </div>
           <div
-            class="sc-fznyAO CKzus"
+            class="sc-fznZeY eCjZGZ"
           >
             <span
-              class="sc-fznKkj iPQuDl"
+              class="sc-fzplWN bGrQEY"
             >
-              <strong>
+              <strong
+                class="sc-fznyAO kogXNa"
+              >
                 Attribute1
                 :
               </strong>
@@ -75,9 +77,11 @@ exports[`Review Matches snapshot 1`] = `
               test Value
             </span>
             <span
-              class="sc-fznKkj iPQuDl"
+              class="sc-fzplWN bGrQEY"
             >
-              <strong>
+              <strong
+                class="sc-fznyAO kogXNa"
+              >
                 Attrivbute2
                 :
               </strong>
