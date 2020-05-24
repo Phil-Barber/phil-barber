@@ -74,10 +74,10 @@ export const Main = ({ data }) => {
   const entranceAnimation = useSpring(glideIn);
   const transitions = useTransition(posts, ({ node }) => node.id, {
     unique: true,
-    trail: 1000 / posts.length,
+    trail: 500 / posts.length,
     ...glideIn,
     enter: glideIn.to,
-    config: config.gentle,
+    config: config.stiff,
   });
 
   return (
