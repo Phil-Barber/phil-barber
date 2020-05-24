@@ -44,46 +44,9 @@ exports[`Main Matches snapshot 1`] = `
           <div
             class="sc-fzokOt cIzEVk"
           >
-            <h1>
-              Look! It's a website all about me
-            </h1>
-            <p>
-              Impressive and confusing that you've ended up here. Not much to see yet.
-            </p>
-            <p>
-              This is a work in progess site, beginning as a 100 days of
-               
-              <a
-                href="https://www.gatsbyjs.org/blog/tags/100-days-of-gatsby/"
-              >
-                Gatsby
-              </a>
-               
-              project. You can find recent books and films I've been enjoying, perhaps more in the future.
-            </p>
-            <p>
-              I use vim and don't have a spell checker. Couple that with my horrendous spelling and you'll be sure to find a few (many) spelling errors. Feel free to open a
-               
-              <a
-                href="https://github.com/Phil-Barber/phil-barber/"
-              >
-                PR
-              </a>
-              !
-            </p>
-            <p>
-              I won't be offended that you've already noticed that I'm definitely 
-              <strong>
-                not
-              </strong>
-               a designer. I did my best with the colours OK, I'd appreciate it if we could just leave it at that.
-            </p>
-            <p>
-              Full disclosure: this is a work in progress and you shouldn't expect most (if any) of these links to actualy work.
-            </p>
-            <p>
-              Thanks for stopping by!
-            </p>
+            <div>
+              Test About Content
+            </div>
           </div>
         </div>
         <div

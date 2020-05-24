@@ -11,6 +11,9 @@ describe('Main', () => {
     const { container } = render(
       <Main
         data={{
+          markdownRemark: {
+            html: '<div>Test About Content',
+          },
           allMarkdownRemark: {
             totalCount: 2,
             edges: [{ node: { id: 1 } }, { node: { id: 2 } }],

@@ -68,6 +68,7 @@ const PostsCount = styled.span`
 `;
 
 export const Main = ({ data }) => {
+  const aboutContent = data.markdownRemark;
   const posts = data.allMarkdownRemark.edges;
   const transitions = useTransition(posts, ({ node }) => node.id, {
     unique: true,
@@ -82,38 +83,7 @@ export const Main = ({ data }) => {
       <SEO title="Phil Barber" description="Homepage" />
       <Container>
         <AboutColumn>
-          <AboutText>
-            <h1>Look! It&apos;s a website all about me</h1>
-            <p>
-              Impressive and confusing that you&apos;ve ended up here. Not much
-              to see yet.
-            </p>
-            <p>
-              This is a work in progess site, beginning as a 100 days of{' '}
-              <a href="https://www.gatsbyjs.org/blog/tags/100-days-of-gatsby/">
-                Gatsby
-              </a>{' '}
-              project. You can find recent books and films I&apos;ve been
-              enjoying, perhaps more in the future.
-            </p>
-            <p>
-              I use vim and don&apos;t have a spell checker. Couple that with my
-              horrendous spelling and you&apos;ll be sure to find a few (many)
-              spelling errors. Feel free to open a{' '}
-              <a href="https://github.com/Phil-Barber/phil-barber/">PR</a>!
-            </p>
-            <p>
-              I won&apos;t be offended that you&apos;ve already noticed that
-              I&apos;m definitely <strong>not</strong> a designer. I did my best
-              with the colours OK, I&apos;d appreciate it if we could just leave
-              it at that.
-            </p>
-            <p>
-              Full disclosure: this is a work in progress and you shouldn&apos;t
-              expect most (if any) of these links to actualy work.
-            </p>
-            <p>Thanks for stopping by!</p>
-          </AboutText>
+          <AboutText dangerouslySetInnerHTML={{ __html: aboutContent.html }} />
         </AboutColumn>
         <PostsColumn>
           <PostsTitle>
@@ -133,8 +103,12 @@ export default Main;
 
 export const query = graphql`
   query {
+    markdownRemark(fields: { slug: { eq: "/markdown/about/" } }) {
+      html
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___dateCompleted], order: DESC }
+      filter: { fields: { slug: { regex: "/(film)|(book)/" } } }
     ) {
       totalCount
       edges {
