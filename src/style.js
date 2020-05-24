@@ -25,3 +25,5 @@ export const theme = {
     xxxLarge: '64px',
   },
 };
+
+export const twoColumnMinWidth = '(max-width: 1024px)';

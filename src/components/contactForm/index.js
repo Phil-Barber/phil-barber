@@ -53,7 +53,7 @@ export const ContactForm = () => {
           <input type="hidden" name="bot-field" value="contact" />
           <S.FullWidthInput label="Email Address*" name="email" type="email" />
           <S.FlexBox>
-            <S.ShortInput label="Name*" name="name" type="text" />
+            <S.ShortInput label="Name*" name="name" type="text" isLeft />
             <S.ShortInput label="Company" name="company" type="text" />
           </S.FlexBox>
           <S.MessageInput

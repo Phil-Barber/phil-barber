@@ -15,6 +15,11 @@ export const FullWidthInput = styled(TextInputStyled)`
 
 export const ShortInput = styled(TextInputStyled)`
   width: 50%;
+
+  ${({ isLeft, theme: { spacing } }) =>
+    isLeft
+      ? `padding-right: ${spacing.small}`
+      : `padding-left: ${spacing.small}`};
 `;
 
 export const MessageInput = styled(FullWidthInput)`

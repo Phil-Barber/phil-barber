@@ -7,7 +7,7 @@ const Details = ({ details }) => (
   <S.DetailsContainer>
     {details.map(({ attr, value }) => (
       <S.Detail key={attr}>
-        <strong>{attr}:</strong> {value}
+        <S.Attr>{attr}:</S.Attr> {value}
       </S.Detail>
     ))}
   </S.DetailsContainer>
