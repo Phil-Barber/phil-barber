@@ -32,7 +32,6 @@ const Container = styled.div`
   min-height: 100vh;
 
   @media ${twoColumnMinWidth} {
-    min-width: 100vw;
     flex-direction: column;
     height: unset;
 

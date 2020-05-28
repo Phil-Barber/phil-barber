@@ -43,10 +43,10 @@ const Sidebar = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   box-sizing: border-box;
   overflow: scroll;
   box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.24);
+  padding-top: 300px;
 `;
 
 const StyledLink = styled(Link)`
@@ -68,6 +68,7 @@ export const ContentContainer = styled.div`
   color: ${({ theme }) => theme.colors.secondary};
   padding: ${({ theme }) => theme.spacing.normal};
   text-align: justify;
+  width: 100vw;
 
   h1,
   h2,
@@ -100,7 +101,7 @@ const PageWrapper = ({ className, children }) => {
 
   const sidebarRef = useRef();
   const sidebarAnimation = useSpring({
-    'min-width': isSidebarOpen ? '300px' : '0px',
+    width: isSidebarOpen ? '300px' : '0px',
     config: config.stiff,
     ref: sidebarRef,
   });
