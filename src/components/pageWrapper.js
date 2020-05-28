@@ -56,7 +56,6 @@ const StyledLink = styled(Link)`
 const NavLink = styled(animated(StyledLink))`
   width: 80px;
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary};
   transition: font-size 0.5s ease, font-weight 0.5s ease;
 
   :hover {
