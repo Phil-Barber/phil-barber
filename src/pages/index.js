@@ -55,7 +55,7 @@ const AboutText = styled(a.div)`
   ${centerLayout}
 `;
 
-const PostsTitle = styled.div`
+const PostsTitle = styled(a.div)`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -90,8 +90,8 @@ export const Main = ({ data }) => {
           />
         </AboutColumn>
         <PostsColumn>
-          <PostsTitle>
-            <a.h1 style={entranceAnimation}>Posts</a.h1>
+          <PostsTitle style={entranceAnimation}>
+            <h1>Posts</h1>
             <PostsCount>Total: {data.allMarkdownRemark.totalCount}</PostsCount>
           </PostsTitle>
           {transitions.map(({ item, key, props }) => (

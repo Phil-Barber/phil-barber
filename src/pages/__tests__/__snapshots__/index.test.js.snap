@@ -55,10 +55,9 @@ exports[`Main Matches snapshot 1`] = `
         >
           <div
             class="sc-fzqBZW fNVHmc"
+            style="opacity: 0; transform: translate3d(0, 100px, 0);"
           >
-            <h1
-              style="opacity: 0; transform: translate3d(0, 100px, 0);"
-            >
+            <h1>
               Posts
             </h1>
             <span
