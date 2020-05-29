@@ -2,7 +2,7 @@
 title: "Snow Falling on Cedars"
 published: 1994
 author: "David Gutterson"
-dateCompleted: "2019-11-4"
+dateCompleted: "2019-11-04"
 featuredImage: ../../images/books/snow_falling_on_cedars.jpg
 rating: 5/5
 ---
@@ -23,7 +23,8 @@ Each and every character in this book had a depth to them that kept me
 captivated. Every motive seemed justified. I knew each man and woman, from their
 childhood to the present like people I had known my whole life. The young
 romance betweeen Hatsue and Ishmael was torturous and fascinating, while never
-distracting from the murder trial at hand.
-
-
+distracting from the murder trial at hand. The nice-guy attitude of Ishmael, 
+watching his descent into a really nasty character. I was very pleased when he
+finally decided to do the right thing, but I wouldn't have been at all surprised
+had he not.
 
