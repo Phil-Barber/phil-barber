@@ -22,9 +22,9 @@ celebrations it was surely worth reading.
 
 Much like the fireworks, Frankenstein was a delight to experience. Bright
 flashes of genius from the main character, Victor Frankenstein, in his endeavour
-to understand the secret of life. The wonderful colourful scenery of the swiss
+to understand the secret of life. The wonderful colourful scenery of the Swiss
 alps with the meandering Arve, or the rolling English countryside. These were
-intersperesed with deep dark pits of madness, anxiety and fear. Many times I
+interspersed with deep dark pits of madness, anxiety and fear. Many times I
 was entranced by Frankenstein's dizzying descent into mania.
 
 Having completed the book I'm still uncertain on the protagonist. Obviously the 

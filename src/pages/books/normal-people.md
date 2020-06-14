@@ -18,7 +18,7 @@ and left me with a heavy heap of nostalgia of my late school days. The feeling
 of how the world was and the nerves of leaving a small town, moving away from
 my parents to university. Normal People captured all that perfectly.
 
-Dissapointingly the second half lost me slightly. I was still invested in the
+Disappointingly the second half lost me slightly. I was still invested in the
 protagonists but felt less and less that these people were real. Marianne's
 decline felt tragic and I could follow her experiences and they were believable,
 horrible, and saddening.

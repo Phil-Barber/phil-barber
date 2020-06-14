@@ -16,7 +16,7 @@ it being a blast.
 
 Despite it's age and reputation, The Matrix holds up. I would argue a genuinely
 good film, great narrative, great fights. In this film the CGI is over the top
-but by just the right amount - the sequals are where things get truly silly. 
+but by just the right amount - the sequels are where things get truly silly. 
 
 What I enjoyed the most about the film though was realising just how 90's it
 was. Some of the dialogue was laugh out loud cliche, and reminded me that this 

@@ -7,8 +7,8 @@ director: ["Paul Thomas Anderson"]
 starring: ["Vicky Krieps", "Daniel Day-Lewis"]
 ---
 
-This had been on my watchlist since it's release, and perhaps it was that long
-build of anticipation that resulted in my disatisfaction.
+This had been on my watch-list since it's release, and perhaps it was that long
+build of anticipation that resulted in my dissatisfaction.
 
 The tale of Reynolds Woodcock and his muse was intriguing, and the winding
 narrative kept me entertained. The performances were sublime, Daniel Day-Lewis

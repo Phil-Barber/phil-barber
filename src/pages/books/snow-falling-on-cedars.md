@@ -8,7 +8,7 @@ rating: 5/5
 ---
 
 This book was given to me as a gift on my 26th birthday by my dear friend Will;
-I hold his judgemnt in very high regard so I was eager to start. Once again he
+I hold his judgment in very high regard so I was eager to start. Once again he
 didn't disappoint. This serendipitously coincided with my return from LA where
 I had been working with a prospective client, Cedars Sinai hospital. Despite
 wincing involuntarily at each mention of "cedars", of which there are many, this
@@ -22,7 +22,7 @@ entranced.
 Each and every character in this book had a depth to them that kept me
 captivated. Every motive seemed justified. I knew each man and woman, from their
 childhood to the present like people I had known my whole life. The young
-romance betweeen Hatsue and Ishmael was torturous and fascinating, while never
+romance between Hatsue and Ishmael was torturous and fascinating, while never
 distracting from the murder trial at hand. The nice-guy attitude of Ishmael, 
 watching his descent into a really nasty character. I was very pleased when he
 finally decided to do the right thing, but I wouldn't have been at all surprised

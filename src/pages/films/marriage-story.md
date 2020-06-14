@@ -19,7 +19,7 @@ It was terrifying to watch as the most well meaning, amicable separation was
 nudged towards the slippery slope of an uncivil divorce. Believable in every 
 way, by the 90 minute mark I was left wondering what the point in love even is.
 If it can end with you accidentally slashing your forearm open whilst trying to 
-convince a custodial investigator what a competant parent you are - is it worth 
+convince a custodial investigator what a competent parent you are - is it worth 
 it?
 
 The acting in this really is exceptional, I was even able to get over the 

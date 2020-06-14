@@ -17,7 +17,7 @@ cover up of child abuse within Catholic Archdiocese. Reminiscent of [All The
 President's Men](https://www.imdb.com/title/tt0074119/?ref_=fn_al_tt_1), the
 gentle build of momentum from the almost inane first lead to the crashing
 waterfall implicated priests and the countless victims left in their wake was
-exhilirating.
+exhilarating.
 
 McCarthy builds momentum expertly. Sweeping the viewer up into the ebbs and
 flows of the story. The dead ends, the not-so-dead ends. The sheer scale of it 
