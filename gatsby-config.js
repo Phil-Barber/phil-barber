@@ -1,3 +1,4 @@
+require("ts-node").register({ files: true })
 module.exports = {
   siteMetadata: {
     title: 'Phil Barber',
@@ -10,6 +11,14 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-codegen',
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, 
+        allExtensions: true, // defaults to false
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

@@ -1,3 +1,4 @@
+require("ts-node").register({ files: true })
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { isFilmSlug, isBookSlug, isSrcMarkdown } = require('./src/utils');
