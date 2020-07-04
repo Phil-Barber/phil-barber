@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ToastProvider } from 'react-toast-notifications';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { theme } from './src/style';
+import { theme } from '../src/style';
 
 const GlobalStyle = createGlobalStyle`
   a {

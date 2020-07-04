@@ -1,9 +1,10 @@
-require('ts-node').register({ files: true });
-const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
-const { isFilmSlug, isBookSlug, isSrcMarkdown } = require('./src/utils');
+import path from 'path';
+import { createFilePath } from 'gatsby-source-filesystem';
+import { isFilmSlug, isBookSlug, isSrcMarkdown } from '../src/utils';
+import { MarkdownRemarkConnection } from '../src/types/graphql-types';
+import { CreatePagesArgs, CreateNodeArgs } from 'gatsby';
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, getNode, actions }: CreateNodeArgs) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({ node, getNode, basePath: 'pages' });
@@ -15,9 +16,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const { createPage } = actions;
-  const result = await graphql(`
+  const result: {
+    data?: { allMarkdownRemark?: MarkdownRemarkConnection };
+  } = await graphql(`
     query {
       allMarkdownRemark {
         edges {
