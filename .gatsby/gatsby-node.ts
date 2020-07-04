@@ -2,7 +2,11 @@ import path from 'path';
 import { createFilePath } from 'gatsby-source-filesystem';
 import { isFilmSlug, isBookSlug, isSrcMarkdown } from '../src/utils';
 import { MarkdownRemarkConnection } from '../src/types/graphql-types';
-import { CreatePagesArgs, CreateNodeArgs } from 'gatsby';
+import { CreateBabelConfigArgs, CreatePagesArgs, CreateNodeArgs } from 'gatsby';
+
+exports.onCreateBabelConfig = ({ actions }: CreateBabelConfigArgs) => {
+actions.setBabelPreset({ name: 'babel-preset-gatsby', options: {} });
+};
 
 exports.onCreateNode = ({ node, getNode, actions }: CreateNodeArgs) => {
   const { createNodeField } = actions;

@@ -22,20 +22,20 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'pages',
-                path: `${__dirname}/src/`,
+                path: `${__dirname}/../src/`,
             },
         },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'blogs',
-                path: `${__dirname}/blog/`,
+                path: `${__dirname}/../blog/`,
             },
         },
         {
             resolve: 'gatsby-plugin-typography',
             options: {
-                pathToConfigModule: 'src/utils/typography',
+                pathToConfigModule: `${__dirname}/../src/utils/typography`,
             },
         },
         {
@@ -47,7 +47,7 @@ module.exports = {
                 background_color: '#6b37bf',
                 theme_color: '#6b37bf',
                 display: 'standalone',
-                icon: 'src/images/icon.jpeg',
+                icon: `${__dirname}/../src/images/icon.jpeg`,
             },
         },
         'gatsby-plugin-react-helmet',

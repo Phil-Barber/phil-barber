@@ -4,7 +4,6 @@
     "babel-plugin-styled-components"
   ],
   "presets": [
-    "@babel/preset-typescript",
-    ["babel-preset-gatsby"],
+    ["@babel/preset-typescript", { isTSX: true, allExtensions: true }],
   ]
 }
