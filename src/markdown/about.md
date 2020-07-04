@@ -19,7 +19,7 @@ leave it at that.
 
 
 If you want to learn about my career check out my
-[Linkedin]|(https://uk.linkedin.com/in/philip-barber-827581b1?).  I'm
+[Linkedin](https://uk.linkedin.com/in/philip-barber-827581b1?).  I'm
 particularly interested in conributing to social enterprises and good causes.
 If there's an opportunity you think would interest me, hit me up using the
 [contact form](./contact).
