@@ -5,7 +5,7 @@ import { MarkdownRemarkConnection } from '../src/types/graphql-types';
 import { CreateBabelConfigArgs, CreatePagesArgs, CreateNodeArgs } from 'gatsby';
 
 exports.onCreateBabelConfig = ({ actions }: CreateBabelConfigArgs) => {
-actions.setBabelPreset({ name: 'babel-preset-gatsby', options: {} });
+  actions.setBabelPreset({ name: 'babel-preset-gatsby', options: {} });
 };
 
 exports.onCreateNode = ({ node, getNode, actions }: CreateNodeArgs) => {
