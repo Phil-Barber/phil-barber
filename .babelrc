@@ -1,5 +1,8 @@
 {
-  "plugins": ["@babel/plugin-proposal-export-default-from"],
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from",
+    "babel-plugin-styled-components"
+  ],
   "presets": [
     "@babel/preset-typescript",
     ["babel-preset-gatsby"],

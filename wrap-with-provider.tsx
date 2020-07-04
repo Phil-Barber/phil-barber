@@ -13,7 +13,7 @@ interface Props {
   element: React.ReactNode;
 }
 
-export const wrapWithProvider = ({ element }: Props): React.FC<Props> => (
+export const wrapWithProvider: React.FC<Props> = ({ element }: Props) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <ToastProvider>{element}</ToastProvider>

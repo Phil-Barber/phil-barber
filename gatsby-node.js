@@ -1,4 +1,4 @@
-require("ts-node").register({ files: true })
+require('ts-node').register({ files: true });
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { isFilmSlug, isBookSlug, isSrcMarkdown } = require('./src/utils');
@@ -37,11 +37,11 @@ exports.createPages = async ({ graphql, actions }) => {
     },
     {
       check: isFilmSlug,
-      template: './src/templates/film.js',
+      template: './src/templates/film.tsx',
     },
     {
       check: isBookSlug,
-      template: './src/templates/book.js',
+      template: './src/templates/book.tsx',
     },
   ];
 
@@ -65,7 +65,7 @@ exports.createPages = async ({ graphql, actions }) => {
     if (!matched) {
       createPage({
         path: slug,
-        component: path.resolve('./src/templates/generic.js'),
+        component: path.resolve('./src/templates/generic.tsx'),
         context: { slug },
       });
     }

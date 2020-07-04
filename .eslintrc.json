@@ -11,7 +11,6 @@
     "eslint:recommended",
     "eslint-config-react-app",
     "plugin:react/recommended",
-    "plugin:flowtype/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/all"
