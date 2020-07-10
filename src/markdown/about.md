@@ -13,23 +13,31 @@ Check out the code for this page [here](https://github.com/Phil-Barber/phil-barb
 It's nothing particularly special but could interest you I suppose.
 
 
-I won't be offended that you've already noticed that I'm definitely **not** a
+I won't be offended that you've already noticed I'm definitely **not** a
 designer. I did my best with the colours OK, I'd appreciate it if we could just
 leave it at that.
 
 
+Thanks for stopping by!
+
+## About me
+
+### In 10 seconds
+I write software and enjoy music, films, books and other generic things.
+
+### In 10 minutes
 If you want to learn about my career check out my
 [Linkedin](https://uk.linkedin.com/in/philip-barber-827581b1?).  I'm
-particularly interested in conributing to social enterprises and good causes.
-If there's an opportunity you think would interest me, hit me up using the
-[contact form](./contact).
-
+particularly interested in conributing to social enterprises and good causes,
+don't hesitate to get in touch using the contact form below!
 
 For probably more interesting info on me you could view my
 [Spotify](https://open.spotify.com/user/phil12321?si=lSLEs-7NTIKbVMVWTP-LBA)
 or my
 [IMDB watchlist](https://www.imdb.com/user/ur46443696/watchlist?ref_=nv_usr_wl_all_0).
 
+## Contact
+If there's an opportunity you think would interest me, hit me up using the
+[contact form](./contact).
 
-Thanks for stopping by!
 
