@@ -48,7 +48,7 @@ physical gap between us and meet for a take-away pint.
 
 It was also one of the few ways to escape lockdown and resulted in a mini cycle
 tour through the beautiful Norfolk Broads, wild camping for 3 days. The highest
-ration of [punctures](/puncture.jpg) to kilometers I've ever known
+ration of [punctures](/puncture.jpg) to kilometers I've ever known.
 
 
 ---

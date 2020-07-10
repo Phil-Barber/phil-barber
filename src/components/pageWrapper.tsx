@@ -52,6 +52,7 @@ const Sidebar = styled(animated.div)`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  text-align: center;
 `;
 
 const NavLink = styled(animated(StyledLink))`
@@ -114,18 +115,13 @@ const PageWrapper: React.FC<Props> = ({ className, children }: Props) => {
 
   const listItems = [
     {
-      children: 'Contact',
-      key: 'contact1',
-      to: '/contact/',
+      children: 'Now',
+      key: 'now',
+      to: '/now',
     },
     {
       children: 'Contact',
-      key: 'contact2',
-      to: '/contact/',
-    },
-    {
-      children: 'Contact',
-      key: 'contact3',
+      key: 'contact',
       to: '/contact/',
     },
   ];

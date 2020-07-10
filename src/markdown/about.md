@@ -21,6 +21,7 @@ leave it at that.
 Thanks for stopping by!
 
 ## About me
+What I'm doing [now](/now).
 
 ### In 10 seconds
 I write software and enjoy music, films, books and other generic things.
