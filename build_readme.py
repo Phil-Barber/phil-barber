@@ -37,8 +37,15 @@ def file_url(file):
 
 
 def file_updated(file):
-    dt = datetime.datetime.fromtimestamp(os.path.getmtime(file))
-    return dt.strftime("%d %b %Y")
+    try:
+        contents = open(file.path, "r", encoding="utf-8").read()
+    except UnicodeDecodeError:
+        contents = open(file.path, "r", encoding="us-ascii").read()
+
+    r = re.compile(r".*dateCompleted: \"(.*?)\".*", re.DOTALL)
+    date_string = r.match(contents).group(1)
+    date = datetime.datetime.strptime(date_string, "%Y-%m-%d")
+    return date.strftime("%d %b %Y")
 
 
 def get_recent_posts() -> List[os.DirEntry]:
@@ -62,4 +69,5 @@ if __name__ == "__main__":
     )
     rewritten = replace_chunk(readme_contents, "recent posts", recent_posts_md)
 
-    readme.open("w").write(rewritten)
+    print(rewritten)
+    # readme.open("w").write(rewritten)
