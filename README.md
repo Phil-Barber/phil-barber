@@ -29,5 +29,11 @@ I also have a shocking memory so I use the blog posts here as a way to remind my
 ![Django](https://img.shields.io/badge/-Django-000000?style=flat&logo=django&labelColor=darkgreen)
 
 # Recent Posts
+This list updates automatically!
 <!-- recent posts start -->
+* [Naked Lunch](http://phil-barber.uk/books/naked-lunch) - 16 Oct 2020
+* [Normal People](http://phil-barber.uk/books/normal-people) - 16 Oct 2020
+* [Frankenstein](http://phil-barber.uk/books/frankenstein) - 16 Oct 2020
+* [Stoner](http://phil-barber.uk/books/stoner) - 16 Oct 2020
+* [Snow Falling On Cedars](http://phil-barber.uk/books/snow-falling-on-cedars) - 16 Oct 2020
 <!-- recent posts end -->
