@@ -27,3 +27,7 @@ I also have a shocking memory so I use the blog posts here as a way to remind my
 ![ESlint](https://img.shields.io/badge/-ESlint-000000?style=flat&logo=ESlint&labelColor=4B32C3)
 ![Python](https://img.shields.io/badge/-Python-000000?style=flat&logo=python&labelColor=inactive)
 ![Django](https://img.shields.io/badge/-Django-000000?style=flat&logo=django&labelColor=darkgreen)
+
+# Recent Posts
+<!-- recent posts start -->
+<!-- recent posts end -->
