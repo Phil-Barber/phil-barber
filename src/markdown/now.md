@@ -4,34 +4,26 @@ _(This is [a now page](https://nownownow.com/about))_
 
 ## Learning
 
-Lockdown has been a magnificent time for self development. I've done a lot of
-introspection and spending more time doing things I enjoy:
-- reading
-- watching
-- listening
-- learning.
+The so called new normal is now stale and lost all meaning. This is life now.
 
+Permenantly working from home is something I enjoy and would have seized with 
+both hands 12 months ago - but even I would enjoy seeing my colleagues in the
+flesh again after so much time virtually waving to each other, grinning like
+fools to a screen, all desperate to reach out from our imposed isolations.
 
-My company was forced earlier this year to temporarily reduce our hours to 80%
-due to _THE VIRUS_. This made me realise that actually, more time for me and 
-less time at work is actually... quite nice. So after being brought back up to 
-full time, I swiftly reduced my hours again. Let's see where it takes me!
-
-
-Speaking of my job:
+Still venturing up to London to see my pals as and when I can which has been a
+welcome shift. I'm writing this on the eve of "tier 2 restrictions"© so we'll
+see what happens next.
 
 
 ## Lantum
 
-Currently working 4 days a week at [lantum](http://lantum.com/) with the aim
-to unite the world's healthcare workers on a single platform.
+Lead developer on one of three squads, responsible for delivery of high quality 
+features with unforgiving deadlines. It's all systems go for us at the moment
+to reach the start-up Mecca: product market fit.
 
-I work on both the React (and legacy AngularJS 🤢) front end and a
-micro-services based back end (90% Python Django), as well as being a key 
-influencer in our technical decisions and specifications. 
-
-I line-manage 2 lovely people and the dev team is a total of around 10 equally 
-lovely people.
+Currently on 9-days a week, keeping myself busy in that 10th day with things
+like this and going to cafes and eating an unreasonable amount of cake.
 
 ### More on Lantum
 Temporary staffing in the NHS is a [huge cost](https://www.gov.uk/government/news/clampdown-on-nhs-staffing-agency-costs) due to the crisis in available staff. Lantum aims to 
@@ -40,18 +32,15 @@ the future - replacing tedious pen and paper rotas an manual uploads with fully
 digital and seamless staff scheduling. 
 
 
-## Cycling
+## Riff
 
-I've rediscovered how thoroughly enjoyable cycling can be! Many of my friends
-have now taken up the sport and it's a super convenient way for us to close the
-physical gap between us and meet for a take-away pint. 
+For the past 3 months I was working 1 day a week at a new startup called Riff. 
+They are one of the many new players in the remote-work communication space,
+focussing on "voice first" contact.
 
-It was also one of the few ways to escape lockdown and resulted in a mini cycle
-tour through the beautiful Norfolk Broads, wild camping for 3 days. The highest
-ration of punctures to kilometers I've ever known.
-![](../images/puncture.jpg)
-
+It was a fun period of writing NodeJS using the google voice to text API. I
+learnt a lot about node streams, buffers and how various audio encodings work.
 
 ---
 
-Updated 10th July 2020, Tonbridge UK
+Updated 16th October 2020, Tonbridge UK
