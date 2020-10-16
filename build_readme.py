@@ -69,5 +69,4 @@ if __name__ == "__main__":
     )
     rewritten = replace_chunk(readme_contents, "recent posts", recent_posts_md)
 
-    print(rewritten)
-    # readme.open("w").write(rewritten)
+    readme.open("w").write(rewritten)
