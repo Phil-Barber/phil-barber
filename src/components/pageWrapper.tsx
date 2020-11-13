@@ -170,6 +170,10 @@ const PageWrapper: React.FC<Props> = ({ className, children }: Props) => {
               {item.children}
             </NavLink>
           ))}
+          <img
+            src="https://api.thegreenwebfoundation.org/greencheckimage/phil-barber.uk"
+            alt="This website is hosted Green - checked by thegreenwebfoundation.org"
+          />
         </Sidebar>
       </Body>
     </>
