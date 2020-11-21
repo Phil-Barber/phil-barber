@@ -31,9 +31,9 @@ I also have a shocking memory so I use the blog posts here as a way to remind my
 # Recent Posts
 This list updates automatically!
 <!-- recent posts start -->
-* [Snow Falling On Cedars](http://phil-barber.uk/books/snow-falling-on-cedars) - 04 Nov 2019
+* [Weather](http://phil-barber.uk/books/weather) - 28 Jun 2020
+* [Atonement](http://phil-barber.uk/books/atonement) - 18 May 2020
+* [The Sellout](http://phil-barber.uk/books/the-sellout) - 27 Aug 2020
 * [Normal People](http://phil-barber.uk/books/normal-people) - 23 Apr 2020
-* [Stoner](http://phil-barber.uk/books/stoner) - 18 Jul 2020
-* [Gilead](http://phil-barber.uk/books/gilead) - 19 Jun 2020
-* [Frankenstein](http://phil-barber.uk/books/frankenstein) - 28 Mar 2020
+* [Snow Falling On Cedars](http://phil-barber.uk/books/snow-falling-on-cedars) - 04 Nov 2019
 <!-- recent posts end -->
