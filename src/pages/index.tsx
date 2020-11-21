@@ -123,7 +123,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___dateCompleted], order: DESC }
-      filter: { fields: { slug: { regex: "/(film)|(book)/" } } }
+      filter: { fields: { slug: { regex: "/(film)|(book)|(blog)/" } } }
     ) {
       totalCount
       edges {
