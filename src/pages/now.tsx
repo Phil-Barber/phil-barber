@@ -18,6 +18,10 @@ export const Now: React.FC<Props> = ({ data }) => {
       <PageLayout>
         <SEO title="Now" description="now now now" />
         <div dangerouslySetInnerHTML={{ __html: nowContent.html }} />
+        <img
+          src="https://api.thegreenwebfoundation.org/greencheckimage/phil-barber.uk"
+          alt="This website is hosted Green - checked by thegreenwebfoundation.org"
+        />
       </PageLayout>
     </FullWidthWrapper>
   );
