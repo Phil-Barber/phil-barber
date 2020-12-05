@@ -51,7 +51,7 @@ def get_file_updated_date(file: os.DirEntry) -> datetime.datetime:
 
 
 def get_recent_posts() -> List[Tuple[os.DirEntry, datetime.datetime]]:
-    dirs = ["books", "films"]
+    dirs = ["books", "films", "blogs"]
     files = [
         (file, get_file_updated_date(file))
         for d in dirs

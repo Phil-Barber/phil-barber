@@ -31,9 +31,9 @@ I also have a shocking memory so I use the blog posts here as a way to remind my
 # Recent Posts
 This list updates automatically!
 <!-- recent posts start -->
+* [Amazon](http://phil-barber.uk/blogs/amazon) - 18 Nov 2020
+* [Erin Brockovich](http://phil-barber.uk/films/erin-brockovich) - 11 Nov 2020
 * [Naked Lunch](http://phil-barber.uk/books/naked-lunch) - 01 Oct 2020
 * [The Sellout](http://phil-barber.uk/books/the-sellout) - 27 Aug 2020
 * [Groundhog Day](http://phil-barber.uk/films/groundhog-day) - 11 Aug 2020
-* [Uncut Gems](http://phil-barber.uk/films/uncut-gems) - 10 Aug 2020
-* [Hereditary](http://phil-barber.uk/films/hereditary) - 29 Jul 2020
 <!-- recent posts end -->
