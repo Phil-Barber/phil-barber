@@ -1,6 +1,6 @@
----
-title: 'Amazon Sucks.'
-dateCompleted: '2020-11-18'
+--"
+title: "Amazon Sucks."
+dateCompleted: "2020-11-18"
 ---
 
 *Everybody shops there, but the reasons not to are overwhelming*
