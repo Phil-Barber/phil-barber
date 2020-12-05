@@ -1,4 +1,4 @@
---"
+---
 title: "Amazon Sucks."
 dateCompleted: "2020-11-18"
 ---
