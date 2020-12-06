@@ -10,6 +10,7 @@ import {
 import styled from 'styled-components';
 import Headroom from 'react-headroom';
 import { useStaticQuery, Link, graphql } from 'gatsby';
+import { snow } from '../utils/snow';
 
 const MainHeader = styled.div`
   display: flex;
@@ -48,6 +49,11 @@ const Sidebar = styled(animated.div)`
   overflow: scroll;
   box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.24);
   padding-top: 300px;
+`;
+
+const Button = styled.button`
+  background: unset;
+  border: 1px solid ${({ theme }) => theme.colors.tertiary};
 `;
 
 const StyledLink = styled(Link)`
@@ -157,6 +163,7 @@ const PageWrapper: React.FC<Props> = ({ className, children }: Props) => {
           <StyledLink to={'/'}>
             <h1>{data.site.siteMetadata.title}</h1>
           </StyledLink>
+          <Button onClick={() => snow()}>Let it Snow! 👈</Button>
           <Arrow style={arrowRotation} onClick={toggleSidebar}>
             &gt;
           </Arrow>
