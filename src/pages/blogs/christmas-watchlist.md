@@ -14,3 +14,10 @@ Watched a lot over the Christmas break, here's all of it:
 - Grease: Never realised how lewd this was (6/10)
 - Coco: I adore this film, makes me teary (8/10)
 - Soul: Quite good, a little convoluted for not much punch. But the message is an important one (7/10)
+- Free Solo: Good, perhaps would have been better had I not watch Dawn Wall already, which I thought was better (7/10)
+- Inside Out: This was really fun, liked it a lot. Probably preferred it to Soul (8/10)
+- Hamilton: Wow this was long, but yeah, worth the watch (8/10)
+
+
+If you haven't figured it out yet: I got Disney+ for a month.
+
