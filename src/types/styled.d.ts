@@ -8,6 +8,8 @@ declare module 'styled-components' {
       readonly tertiary: string;
       readonly black: string;
       readonly white: string;
+      readonly lightGrey1: string;
+      readonly darkGrey1: string;
     };
     readonly spacing: {
       readonly xxxSmall: string;
