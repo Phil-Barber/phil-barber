@@ -13,13 +13,18 @@ exports[`Generic Matches snapshot 1`] = `
         class="sc-AxjAm fEzfgO"
       >
         <a
-          class="sc-AxhUy bILkkK"
+          class="sc-AxgMl ZJAph"
           href="/"
         >
           <h1>
             Test title
           </h1>
         </a>
+        <button
+          class="sc-AxhUy blLbLW"
+        >
+          Let it Snow! 👈
+        </button>
         <span
           class="sc-AxirZ gtVPNy"
           style="transform: rotate(0deg);"
@@ -30,13 +35,13 @@ exports[`Generic Matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="sc-AxiKw jmqPVm sc-Axmtr eCLTHA"
+    class="sc-AxiKw jmqPVm sc-AxmLO gkfGJy"
   >
     <div
-      class="sc-AxheI hhwjIJ"
+      class="sc-Axmtr bdeNGe"
     >
       <div
-        class="sc-AxmLO bIlwlq"
+        class="sc-fzozJi cnKsqX"
       >
         <h1>
           Title

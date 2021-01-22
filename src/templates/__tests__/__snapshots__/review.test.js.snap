@@ -13,13 +13,18 @@ exports[`Review Matches snapshot 1`] = `
         class="sc-AxjAm fEzfgO"
       >
         <a
-          class="sc-AxhUy bILkkK"
+          class="sc-AxgMl ZJAph"
           href="/"
         >
           <h1>
             Test title
           </h1>
         </a>
+        <button
+          class="sc-AxhUy blLbLW"
+        >
+          Let it Snow! 👈
+        </button>
         <span
           class="sc-AxirZ gtVPNy"
           style="transform: rotate(0deg);"
@@ -33,20 +38,20 @@ exports[`Review Matches snapshot 1`] = `
     class="sc-AxiKw jmqPVm"
   >
     <div
-      class="sc-AxheI hhwjIJ"
+      class="sc-Axmtr bdeNGe"
     >
       <div
-        class="sc-AxmLO gAkYvz"
+        class="sc-fzozJi dVHGCq"
       >
         <div
-          class="sc-fzozJi caoJEJ sc-fznKkj gbcwNl"
+          class="sc-fzoLsD eRrbxT sc-fznZeY flnMgJ"
           style="opacity: 0; transform: translate3d(-200px, 0, 0);"
         >
           <div
-            class="sc-fzokOt fbCyFV"
+            class="sc-fzqBZW kDPVIw"
           >
             <div
-              class="sc-fzpans iiysSo gatsby-image-wrapper"
+              class="sc-fzplWN hNmndR gatsby-image-wrapper"
               style="position: relative; overflow: hidden;"
             >
               <div
@@ -66,13 +71,13 @@ exports[`Review Matches snapshot 1`] = `
               </noscript>
             </div>
             <div
-              class="sc-fznZeY dIrYlt"
+              class="sc-fzokOt hbhRWi"
             >
               <span
-                class="sc-fzplWN bGrQEY"
+                class="sc-fznyAO iJRaSg"
               >
                 <strong
-                  class="sc-fznyAO kogXNa"
+                  class="sc-fznKkj NwcJf"
                 >
                   Attribute1
                   :
@@ -81,10 +86,10 @@ exports[`Review Matches snapshot 1`] = `
                 test Value
               </span>
               <span
-                class="sc-fzplWN bGrQEY"
+                class="sc-fznyAO iJRaSg"
               >
                 <strong
-                  class="sc-fznyAO kogXNa"
+                  class="sc-fznKkj NwcJf"
                 >
                   Attrivbute2
                   :
@@ -95,11 +100,11 @@ exports[`Review Matches snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-fzqBZW kEXXip"
+            class="sc-fzqNJr dgMRDY"
           />
         </div>
         <div
-          class="sc-fzozJi sc-fzoLsD jwyEOV"
+          class="sc-fzoLsD sc-fzpans fMNyIp"
         >
           <div
             style="opacity: 0; transform: translate3d(0, 100px, 0);"

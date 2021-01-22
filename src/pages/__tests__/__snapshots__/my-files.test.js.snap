@@ -13,13 +13,18 @@ exports[`MyFiles Matches snapshot 1`] = `
         class="sc-AxjAm fEzfgO"
       >
         <a
-          class="sc-AxhUy bILkkK"
+          class="sc-AxgMl ZJAph"
           href="/"
         >
           <h1>
             Test title
           </h1>
         </a>
+        <button
+          class="sc-AxhUy blLbLW"
+        >
+          Let it Snow! 👈
+        </button>
         <span
           class="sc-AxirZ gtVPNy"
           style="transform: rotate(0deg);"
@@ -33,10 +38,10 @@ exports[`MyFiles Matches snapshot 1`] = `
     class="sc-AxiKw jmqPVm"
   >
     <div
-      class="sc-AxheI hhwjIJ"
+      class="sc-Axmtr bdeNGe"
     >
       <div
-        class="sc-AxmLO jVuMPO"
+        class="sc-fzozJi lhSHn"
       >
         <div>
           <h1>

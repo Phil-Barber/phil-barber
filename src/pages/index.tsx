@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { animated, useSpring, useTransition, config } from 'react-spring';
 import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
 import SEO from '../components/seo';
 import { AnimatedPost } from '../components/post';
+import { Badge } from '../components/badge';
 import { twoColumnMinWidth, glideIn } from '../style';
 import {
   MarkdownRemark,
   MarkdownRemarkConnection,
 } from '../types/graphql-types';
+import { isFilmSlug, isBookSlug, isBlogSlug } from '../utils';
 
 const Column = styled.div`
   padding: ${({ theme }) => theme.spacing.normal};
@@ -59,7 +61,11 @@ const AboutText = styled(animated.div)`
   ${centerLayout}
 `;
 
-const PostsTitle = styled(animated.div)`
+const PostsHeader = styled(animated.div)`
+  margin-bottom: ${({ theme }) => theme.spacing.normal};
+`;
+
+const PostsTitle = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -77,6 +83,11 @@ interface Props {
   };
 }
 
+const FILMS = 'films';
+const BOOKS = 'books';
+const BLOGS = 'blogs';
+type PostType = typeof FILMS | typeof BOOKS | typeof BLOGS;
+
 export const Main: React.FC<Props> = ({ data }: Props) => {
   const aboutContent = data.markdownRemark;
   const posts = data.allMarkdownRemark.edges;
@@ -90,6 +101,15 @@ export const Main: React.FC<Props> = ({ data }: Props) => {
     config: config.stiff,
   });
 
+  const [selected, setSelected] = useState<Array<PostType>>([]);
+  const toggleSelected = (clicked: PostType) => () => {
+    setSelected((selected) =>
+      selected.includes(clicked)
+        ? selected.filter((item) => item !== clicked)
+        : [...selected, clicked]
+    );
+  };
+
   return (
     <PageWrapper>
       <SEO title="Phil Barber" description="Homepage" />
@@ -101,13 +121,58 @@ export const Main: React.FC<Props> = ({ data }: Props) => {
           />
         </AboutColumn>
         <PostsColumn>
-          <PostsTitle style={entranceAnimation}>
-            <h1>Posts</h1>
-            <PostsCount>Total: {data.allMarkdownRemark.totalCount}</PostsCount>
-          </PostsTitle>
-          {transitions.map(({ item, key, props }) => (
-            <AnimatedPost key={key} {...item.node} style={props} />
-          ))}
+          <PostsHeader style={entranceAnimation}>
+            <PostsTitle>
+              <h1>Posts</h1>
+              <PostsCount>
+                Total: {data.allMarkdownRemark.totalCount}
+              </PostsCount>
+            </PostsTitle>
+            <Badge
+              onClick={toggleSelected(FILMS)}
+              isSelected={selected.includes(FILMS)}
+            >
+              Films
+            </Badge>
+            <Badge
+              onClick={toggleSelected(BOOKS)}
+              isSelected={selected.includes(BOOKS)}
+            >
+              Books
+            </Badge>
+            <Badge
+              onClick={toggleSelected(BLOGS)}
+              isSelected={selected.includes(BLOGS)}
+            >
+              Blogs
+            </Badge>
+          </PostsHeader>
+          {transitions
+            .filter(
+              ({
+                item: {
+                  node: {
+                    fields: { slug },
+                  },
+                },
+              }) => {
+                if (!selected.length) return true;
+
+                const filters = {
+                  [BOOKS]: isBookSlug,
+                  [FILMS]: isFilmSlug,
+                  [BLOGS]: isBlogSlug,
+                };
+
+                return selected.reduce(
+                  (acc, item) => acc || filters[item](slug),
+                  false
+                );
+              }
+            )
+            .map(({ item, key, props }) => (
+              <AnimatedPost key={key} {...item.node} style={props} />
+            ))}
         </PostsColumn>
       </Container>
     </PageWrapper>
