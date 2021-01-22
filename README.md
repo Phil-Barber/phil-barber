@@ -31,9 +31,9 @@ I also have a shocking memory so I use the blog posts here as a way to remind my
 # Recent Posts
 This list updates automatically!
 <!-- recent posts start -->
+* [Galapagos](http://phil-barber.uk/books/galapagos) - 06 Jan 2021
 * [Hillbilly Elegy](http://phil-barber.uk/films/hillbilly-elegy) - 04 Dec 2020
 * [The Hustle](http://phil-barber.uk/films/the-hustle) - 30 Nov 2020
 * [Under The Frog](http://phil-barber.uk/books/under-the-frog) - 28 Nov 2020
 * [Dumplin](http://phil-barber.uk/films/dumplin) - 27 Nov 2020
-* [Amazon](http://phil-barber.uk/blogs/amazon) - 18 Nov 2020
 <!-- recent posts end -->
