@@ -76,6 +76,10 @@ const PostsCount = styled.span`
   font-size: 22px;
 `;
 
+const PageButtons = styled.button`
+  margin: 0px ${({ theme }) => theme.spacing.xxSmall};
+`;
+
 interface Props {
   readonly data: {
     readonly markdownRemark: MarkdownRemark;
@@ -109,6 +113,38 @@ export const Main: React.FC<Props> = ({ data }: Props) => {
         : [...selected, clicked]
     );
   };
+
+  const postNodes = transitions
+    .filter(
+      ({
+        item: {
+          node: {
+            fields: { slug },
+          },
+        },
+      }) => {
+        if (!selected.length) return true;
+
+        const filters = {
+          [BOOKS]: isBookSlug,
+          [FILMS]: isFilmSlug,
+          [BLOGS]: isBlogSlug,
+        };
+
+        return selected.reduce(
+          (acc, item) => acc || filters[item](slug),
+          false
+        );
+      }
+    )
+    .map(({ item, key, props }) => (
+      <AnimatedPost key={key} {...item.node} style={props} />
+    ));
+
+  const pageSize = 10;
+  const numPages = Math.ceil(postNodes.length / pageSize);
+
+  const [pageNum, setPageNum] = useState<number>(0);
 
   return (
     <PageWrapper>
@@ -147,32 +183,29 @@ export const Main: React.FC<Props> = ({ data }: Props) => {
               Blogs
             </Badge>
           </PostsHeader>
-          {transitions
-            .filter(
-              ({
-                item: {
-                  node: {
-                    fields: { slug },
-                  },
-                },
-              }) => {
-                if (!selected.length) return true;
+          {postNodes.splice(pageSize * pageNum, pageSize)}
 
-                const filters = {
-                  [BOOKS]: isBookSlug,
-                  [FILMS]: isFilmSlug,
-                  [BLOGS]: isBlogSlug,
-                };
-
-                return selected.reduce(
-                  (acc, item) => acc || filters[item](slug),
-                  false
-                );
-              }
-            )
-            .map(({ item, key, props }) => (
-              <AnimatedPost key={key} {...item.node} style={props} />
-            ))}
+          <PageButtons
+            disabled={pageNum === 0}
+            onClick={() => setPageNum((num) => num - 1)}
+          >
+            Previous
+          </PageButtons>
+          {Array.from({ length: numPages }, (_, n) => (
+            <PageButtons
+              disabled={pageNum === n}
+              key={n}
+              onClick={() => setPageNum(n)}
+            >
+              {n + 1}
+            </PageButtons>
+          ))}
+          <PageButtons
+            disabled={pageNum === numPages - 1}
+            onClick={() => setPageNum((num) => num + 1)}
+          >
+            Next
+          </PageButtons>
         </PostsColumn>
       </Container>
     </PageWrapper>
