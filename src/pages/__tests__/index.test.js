@@ -3,19 +3,24 @@ import { render } from '../../../testUtils';
 import { Main } from '../index';
 import * as post from '../../components/post';
 
-const edges = [
-  {
-    node: { id: 1, fields: { slug: '/films/a-film' } },
-  },
-  {
-    node: { id: 2, fields: { slug: '/books/a-book' } },
-  },
-  {
-    node: { id: 3, fields: { slug: '/blogs/a-blog' } },
-  },
-];
+const randomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+
+const factory = (slug) => {
+  const id = randomInt(1000);
+  return {
+    node: {
+      id,
+      fields: { slug: `${slug}-${id}` },
+    },
+  };
+};
+
+const bookFactory = () => factory('/books/a-book');
+const filmFactory = () => factory('/films/a-film');
+const blogFactory = () => factory('/blogs/a-blog');
+
 const mockPost = () => <div data-testid="post">Mock Post</div>;
-const renderComponent = () =>
+const renderComponent = (posts) =>
   render(
     <Main
       data={{
@@ -23,8 +28,8 @@ const renderComponent = () =>
           html: '<div>Test About Content',
         },
         allMarkdownRemark: {
-          totalCount: 2,
-          edges,
+          totalCount: posts.length,
+          edges: posts,
         },
       }}
     />
@@ -37,7 +42,12 @@ describe('main', () => {
   post.AnimatedPost = mockPost;
 
   it('matches snapshot', () => {
-    const { container } = renderComponent();
+    expect.assertions(1);
+    const { container } = renderComponent([
+      filmFactory(),
+      bookFactory(),
+      blogFactory(),
+    ]);
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
@@ -51,18 +61,13 @@ describe('main', () => {
               class="sc-AxjAm fEzfgO"
             >
               <a
-                class="sc-AxgMl ZJAph"
+                class="sc-AxhUy cAGPKr"
                 href="/"
               >
                 <h1>
                   Test title
                 </h1>
               </a>
-              <button
-                class="sc-AxhUy blLbLW"
-              >
-                Let it Snow! 👈
-              </button>
               <span
                 class="sc-AxirZ gtVPNy"
                 style="transform: rotate(0deg);"
@@ -76,16 +81,16 @@ describe('main', () => {
           class="sc-AxiKw jmqPVm"
         >
           <div
-            class="sc-Axmtr bdeNGe"
+            class="sc-AxheI hhwjIJ"
           >
             <div
-              class="sc-fzokOt gQGohl"
+              class="sc-fznZeY caXcNG"
             >
               <div
-                class="sc-fznKkj sc-fzqBZW gCJMSx"
+                class="sc-fznyAO sc-fzokOt fGGcvI"
               >
                 <div
-                  class="sc-fzqNJr dviVHk"
+                  class="sc-fzqBZW ghgqnZ"
                   style="opacity: 0; transform: translate3d(0, 100px, 0);"
                 >
                   <div>
@@ -94,37 +99,37 @@ describe('main', () => {
                 </div>
               </div>
               <div
-                class="sc-fznKkj sc-fznZeY ksWrla"
+                class="sc-fznyAO sc-fznKkj kFPPHC"
               >
                 <div
-                  class="sc-fzoyAV ckVjra"
+                  class="sc-fzqNJr fRwCKs"
                   style="opacity: 0; transform: translate3d(0, 100px, 0);"
                 >
                   <div
-                    class="sc-fzoLag jzdMXf"
+                    class="sc-fzoyAV hWMbTj"
                   >
                     <h1>
                       Posts
                     </h1>
                     <span
-                      class="sc-fzoXzr eEGhzv"
+                      class="sc-fzoLag lhJAeZ"
                     >
                       Total: 
-                      2
+                      3
                     </span>
                   </div>
                   <button
-                    class="sc-fznyAO fYsZCV"
+                    class="sc-fzplWN cNoNkB"
                   >
                     Films
                   </button>
                   <button
-                    class="sc-fznyAO fYsZCV"
+                    class="sc-fzplWN cNoNkB"
                   >
                     Books
                   </button>
                   <button
-                    class="sc-fznyAO fYsZCV"
+                    class="sc-fzplWN cNoNkB"
                   >
                     Blogs
                   </button>
@@ -156,8 +161,10 @@ describe('main', () => {
   });
 
   it('applies filters correctly', () => {
+    expect.assertions(5);
     // When nothing selected returns all
-    const component = renderComponent();
+    const edges = [filmFactory(), bookFactory(), blogFactory()];
+    const component = renderComponent(edges);
     expect(getPosts(component)).toHaveLength(edges.length);
 
     // Filter films
