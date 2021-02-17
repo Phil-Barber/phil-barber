@@ -43,11 +43,7 @@ describe('main', () => {
 
   it('matches snapshot', () => {
     expect.assertions(1);
-    const { container } = renderComponent([
-      filmFactory(),
-      bookFactory(),
-      blogFactory(),
-    ]);
+    const { container } = renderComponent([filmFactory()]);
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
@@ -115,7 +111,7 @@ describe('main', () => {
                       class="sc-fzoLag lhJAeZ"
                     >
                       Total: 
-                      3
+                      1
                     </span>
                   </div>
                   <button
@@ -133,16 +129,6 @@ describe('main', () => {
                   >
                     Blogs
                   </button>
-                </div>
-                <div
-                  data-testid="post"
-                >
-                  Mock Post
-                </div>
-                <div
-                  data-testid="post"
-                >
-                  Mock Post
                 </div>
                 <div
                   data-testid="post"
