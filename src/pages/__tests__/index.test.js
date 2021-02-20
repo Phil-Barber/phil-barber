@@ -187,45 +187,4 @@ describe('main', () => {
     selectPostType(component, 'Films');
     expect(getPosts(component)).toHaveLength(2);
   });
-
-  it('pages correctly', () => {
-    expect.assertions(20);
-    const numBooks = 25;
-    const edges = [];
-    for (let i = 0; i < numBooks; i++) {
-      edges.push(bookFactory());
-    }
-    const component = renderComponent(edges);
-
-    // Initial buttons correct
-    expect(component.getByText('Previous')).toBeDisabled();
-    expect(component.getByText('1')).toBeDisabled();
-    expect(component.getByText('2')).not.toBeDisabled();
-    expect(component.getByText('3')).not.toBeDisabled();
-    expect(component.getByText('Next')).not.toBeDisabled();
-
-    // Can select specific page
-    component.getByText('2').click();
-    expect(component.getByText('Previous')).not.toBeDisabled();
-    expect(component.getByText('1')).not.toBeDisabled();
-    expect(component.getByText('2')).toBeDisabled();
-    expect(component.getByText('3')).not.toBeDisabled();
-    expect(component.getByText('Next')).not.toBeDisabled();
-
-    // Next button works
-    component.getByText('Next').click();
-    expect(component.getByText('Previous')).not.toBeDisabled();
-    expect(component.getByText('1')).not.toBeDisabled();
-    expect(component.getByText('2')).not.toBeDisabled();
-    expect(component.getByText('3')).toBeDisabled();
-    expect(component.getByText('Next')).toBeDisabled();
-
-    // Previous button works
-    component.getByText('Previous').click();
-    expect(component.getByText('Previous')).not.toBeDisabled();
-    expect(component.getByText('1')).not.toBeDisabled();
-    expect(component.getByText('2')).toBeDisabled();
-    expect(component.getByText('3')).not.toBeDisabled();
-    expect(component.getByText('Next')).not.toBeDisabled();
-  });
 });
