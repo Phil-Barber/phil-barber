@@ -1,20 +1,8 @@
 import React from 'react';
 import { render } from '../../../testUtils';
 import { Main } from '../index';
-import * as post from '../../components/post';
+import * as postsList from '../../components/postsList';
 
-const edges = [
-  {
-    node: { id: 1, fields: { slug: '/films/a-film' } },
-  },
-  {
-    node: { id: 2, fields: { slug: '/books/a-book' } },
-  },
-  {
-    node: { id: 3, fields: { slug: '/blogs/a-blog' } },
-  },
-];
-const mockPost = () => <div data-testid="post">Mock Post</div>;
 const renderComponent = () =>
   render(
     <Main
@@ -23,21 +11,21 @@ const renderComponent = () =>
           html: '<div>Test About Content',
         },
         allMarkdownRemark: {
-          totalCount: 2,
-          edges,
+          edges: [],
         },
       }}
     />
   );
 
-const getPosts = (component) => component.getAllByTestId('post');
-const selectPostType = (component, type) => component.getByText(type).click();
+const mockPostsList = () => <div data-testid="post">Mock Posts List</div>;
 
 describe('main', () => {
-  post.AnimatedPost = mockPost;
+  postsList.PostsList = mockPostsList;
 
-  it('matches snapshot', () => {
+  it('renders correctly', () => {
+    expect.assertions(1);
     const { container } = renderComponent();
+    /* eslint-disable-next-line jest/no-large-snapshots */
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
@@ -51,18 +39,13 @@ describe('main', () => {
               class="sc-AxjAm fEzfgO"
             >
               <a
-                class="sc-AxgMl ZJAph"
+                class="sc-AxhUy cAGPKr"
                 href="/"
               >
                 <h1>
                   Test title
                 </h1>
               </a>
-              <button
-                class="sc-AxhUy blLbLW"
-              >
-                Let it Snow! 👈
-              </button>
               <span
                 class="sc-AxirZ gtVPNy"
                 style="transform: rotate(0deg);"
@@ -76,17 +59,17 @@ describe('main', () => {
           class="sc-AxiKw jmqPVm"
         >
           <div
-            class="sc-Axmtr bdeNGe"
+            class="sc-AxheI hhwjIJ"
           >
             <div
-              class="sc-fzokOt gQGohl"
+              class="sc-fzoyAV cZuQVA"
+              style="opacity: 0; transform: translate3d(0, 100px, 0);"
             >
               <div
-                class="sc-fznKkj sc-fzqBZW gCJMSx"
+                class="sc-fzqBZW sc-fzoLag cXeyBG"
               >
                 <div
-                  class="sc-fzqNJr dviVHk"
-                  style="opacity: 0; transform: translate3d(0, 100px, 0);"
+                  class="sc-fzoXzr fdJzs"
                 >
                   <div>
                     Test About Content
@@ -94,55 +77,12 @@ describe('main', () => {
                 </div>
               </div>
               <div
-                class="sc-fznKkj sc-fznZeY ksWrla"
+                class="sc-fzqBZW sc-fzqNJr hNiahx"
               >
                 <div
-                  class="sc-fzoyAV ckVjra"
-                  style="opacity: 0; transform: translate3d(0, 100px, 0);"
-                >
-                  <div
-                    class="sc-fzoLag jzdMXf"
-                  >
-                    <h1>
-                      Posts
-                    </h1>
-                    <span
-                      class="sc-fzoXzr eEGhzv"
-                    >
-                      Total: 
-                      2
-                    </span>
-                  </div>
-                  <button
-                    class="sc-fznyAO fYsZCV"
-                  >
-                    Films
-                  </button>
-                  <button
-                    class="sc-fznyAO fYsZCV"
-                  >
-                    Books
-                  </button>
-                  <button
-                    class="sc-fznyAO fYsZCV"
-                  >
-                    Blogs
-                  </button>
-                </div>
-                <div
                   data-testid="post"
                 >
-                  Mock Post
-                </div>
-                <div
-                  data-testid="post"
-                >
-                  Mock Post
-                </div>
-                <div
-                  data-testid="post"
-                >
-                  Mock Post
+                  Mock Posts List
                 </div>
               </div>
             </div>
@@ -153,27 +93,5 @@ describe('main', () => {
         </div>
       </div>
     `);
-  });
-
-  it('applies filters correctly', () => {
-    // When nothing selected returns all
-    const component = renderComponent();
-    expect(getPosts(component)).toHaveLength(edges.length);
-
-    // Filter films
-    selectPostType(component, 'Films');
-    expect(getPosts(component)).toHaveLength(1);
-
-    // Filters multiple things
-    selectPostType(component, 'Books');
-    expect(getPosts(component)).toHaveLength(2);
-
-    // Filters all the things
-    selectPostType(component, 'Blogs');
-    expect(getPosts(component)).toHaveLength(3);
-
-    // Can deselect
-    selectPostType(component, 'Films');
-    expect(getPosts(component)).toHaveLength(2);
   });
 });
