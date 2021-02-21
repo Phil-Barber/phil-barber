@@ -46,10 +46,8 @@ export const PurePostsList: React.FC<Props> = ({ data }: Props) => {
     <AnimatedPost key={key} {...item.node} style={props} />
   ));
 
-  const lookupFunc = (item: { props: { fields: { slug: string } } }) => {
-    console.log(item);
-    return item.props.fields.slug;
-  };
+  const lookupFunc = (item: { props: { fields: { slug: string } } }) => 
+    item.props.fields.slug;
 
   const filters = {
     [BOOKS]: isBookSlug,
