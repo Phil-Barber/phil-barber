@@ -1,26 +1,9 @@
 import React from 'react';
 import { render } from '../../../testUtils';
 import { Main } from '../index';
-import * as post from '../../components/post';
+import * as postsList from '../../components/postsList';
 
-const randomInt = (max) => Math.floor(Math.random() * Math.floor(max));
-
-const factory = (slug) => {
-  const id = randomInt(1000);
-  return {
-    node: {
-      id,
-      fields: { slug: `${slug}-${id}` },
-    },
-  };
-};
-
-const bookFactory = () => factory('/books/a-book');
-const filmFactory = () => factory('/films/a-film');
-const blogFactory = () => factory('/blogs/a-blog');
-
-const mockPost = () => <div data-testid="post">Mock Post</div>;
-const renderComponent = (posts) =>
+const renderComponent = () =>
   render(
     <Main
       data={{
@@ -28,22 +11,21 @@ const renderComponent = (posts) =>
           html: '<div>Test About Content',
         },
         allMarkdownRemark: {
-          totalCount: posts.length,
-          edges: posts,
+          edges: [],
         },
       }}
     />
   );
 
-const getPosts = (component) => component.getAllByTestId('post');
-const selectPostType = (component, type) => component.getByText(type).click();
+const mockPostsList = () => <div data-testid="post">Mock Posts List</div>;
 
 describe('main', () => {
-  post.AnimatedPost = mockPost;
+  postsList.PostsList = mockPostsList;
 
-  it('matches snapshot', () => {
+  it('renders correctly', () => {
     expect.assertions(1);
-    const { container } = renderComponent([filmFactory()]);
+    const { container } = renderComponent();
+    /* eslint-disable-next-line jest/no-large-snapshots */
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
@@ -80,14 +62,14 @@ describe('main', () => {
             class="sc-AxheI hhwjIJ"
           >
             <div
-              class="sc-fznZeY caXcNG"
+              class="sc-fzoyAV cZuQVA"
+              style="opacity: 0; transform: translate3d(0, 100px, 0);"
             >
               <div
-                class="sc-fznyAO sc-fzokOt fGGcvI"
+                class="sc-fzqBZW sc-fzoLag cXeyBG"
               >
                 <div
-                  class="sc-fzqBZW ghgqnZ"
-                  style="opacity: 0; transform: translate3d(0, 100px, 0);"
+                  class="sc-fzoXzr fdJzs"
                 >
                   <div>
                     Test About Content
@@ -95,64 +77,13 @@ describe('main', () => {
                 </div>
               </div>
               <div
-                class="sc-fznyAO sc-fznKkj kFPPHC"
+                class="sc-fzqBZW sc-fzqNJr hNiahx"
               >
-                <div
-                  class="sc-fzqNJr fRwCKs"
-                  style="opacity: 0; transform: translate3d(0, 100px, 0);"
-                >
-                  <div
-                    class="sc-fzoyAV hWMbTj"
-                  >
-                    <h1>
-                      Posts
-                    </h1>
-                    <span
-                      class="sc-fzoLag lhJAeZ"
-                    >
-                      Total: 
-                      1
-                    </span>
-                  </div>
-                  <button
-                    class="sc-fzplWN cNoNkB"
-                  >
-                    Films
-                  </button>
-                  <button
-                    class="sc-fzplWN cNoNkB"
-                  >
-                    Books
-                  </button>
-                  <button
-                    class="sc-fzplWN cNoNkB"
-                  >
-                    Blogs
-                  </button>
-                </div>
                 <div
                   data-testid="post"
                 >
-                  Mock Post
+                  Mock Posts List
                 </div>
-                <button
-                  class="sc-fzoXzr dVSRUR"
-                  disabled=""
-                >
-                  Previous
-                </button>
-                <button
-                  class="sc-fzoXzr dVSRUR"
-                  disabled=""
-                >
-                  1
-                </button>
-                <button
-                  class="sc-fzoXzr dVSRUR"
-                  disabled=""
-                >
-                  Next
-                </button>
               </div>
             </div>
           </div>
@@ -162,29 +93,5 @@ describe('main', () => {
         </div>
       </div>
     `);
-  });
-
-  it('applies filters correctly', () => {
-    expect.assertions(5);
-    // When nothing selected returns all
-    const edges = [filmFactory(), bookFactory(), blogFactory()];
-    const component = renderComponent(edges);
-    expect(getPosts(component)).toHaveLength(edges.length);
-
-    // Filter films
-    selectPostType(component, 'Films');
-    expect(getPosts(component)).toHaveLength(1);
-
-    // Filters multiple things
-    selectPostType(component, 'Books');
-    expect(getPosts(component)).toHaveLength(2);
-
-    // Filters all the things
-    selectPostType(component, 'Blogs');
-    expect(getPosts(component)).toHaveLength(3);
-
-    // Can deselect
-    selectPostType(component, 'Films');
-    expect(getPosts(component)).toHaveLength(2);
   });
 });
