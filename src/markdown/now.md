@@ -12,18 +12,25 @@ My aim for this quarter is to retain the calm I cultivated over the Christmas
 break. I've been trying to meditate twice daily, and am doing some form of 
 exercise every day (usually yoga).
 
+*Update* [2021-04-04] Have been using the Waking Up app for about 3 months now
+and I've found it invaluable. I'd highly recommend it.
+
+## Treepoints
+I'm on 4 days a week at Lantum and I'm using my 5th day to take a break from my
+manager schedule and get some much needed maker time at Treepoints.
+
+Treepoints is a new business that aims to give people an affordable, convenient
+and rewarding way to offset their carbon.
+
 
 ## Lantum
 
-Lead developer on one of two squads, responsible for delivery of high quality 
-features with unforgiving deadlines. It's all systems go for us at the moment
-to reach the start-up Mecca: product market fit.
+Engineering Manager on one of two squads, responsible for delivery of high 
+quality features with unforgiving deadlines. It's all systems go for us at the
+moment to reach the start-up Mecca: product market fit.
 
-Coronavirus has impacted us both negatively and positively, and new NHS funding 
-initiatives mean there is more to do than ever.
-
-Currently on 9-days a week, keeping myself busy in that 10th day with things
-like this ~and going to cafes and eating an unreasonable amount of cake~.
+Currently hiring aggressively so if you know or yourself are a developer and 
+Lantum sounds interesting to you, hit me up!
 
 ### More on Lantum
 Temporary staffing in the NHS is a [huge cost](https://www.gov.uk/government/news/clampdown-on-nhs-staffing-agency-costs) due to the crisis in available staff. Lantum aims to 
@@ -34,4 +41,4 @@ digital and seamless staff scheduling.
 
 ---
 
-Updated 16th January 2021, Tonbridge UK
+Updated 4th April 2021, Tonbridge UK
