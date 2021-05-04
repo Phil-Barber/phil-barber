@@ -18,7 +18,7 @@ My longlist:
 - The standard pace is for chumps p47
 - Don't be a donkey p65
 - Admit you're still learning - assume you're below average p68
-- When you're wrong you're taken somewhere unexpected. You learn something knew. Appreciate being wrong p71
+- When you're wrong you're taken somewhere unexpected. You learn something new. Appreciate being wrong p71
 - Everybody's ideas seem obvious to them p81
 - Balance happy / smart / useful 
 - Don't start a business until people are asking you to p93
