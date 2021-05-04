@@ -12,7 +12,7 @@ Yes, would rec.
 My longlist:
 
 - start doing what I claim I want to do or stop lying to myself p8
-- Why am I doing? Keep my goal to of mind. Optimise for it p11
+- Why am I doing? Keep my goal top of mind. Optimise for it p11
 - Actions show the world who you are, and the world treats you by your actions p28
 - Empty time has the potential to be filled with great things. P42
 - The standard pace is for chumps p47
