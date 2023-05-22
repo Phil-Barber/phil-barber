@@ -6,6 +6,8 @@ const white = '#fff';
 const navy = '#001F3F';
 const orange = '#FF851B';
 const silver = '#ddd';
+const lightGrey1 = '#e6e9eb';
+const darkGrey1 = '#000000';
 exports.theme = {
     colors: {
         primary: orange,
@@ -13,6 +15,8 @@ exports.theme = {
         tertiary: silver,
         black,
         white,
+        lightGrey1,
+        darkGrey1,
     },
     spacing: {
         xxxSmall: '2px',

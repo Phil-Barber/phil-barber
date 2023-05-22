@@ -6,6 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const gatsby_source_filesystem_1 = require("gatsby-source-filesystem");
 const utils_1 = require("../src/utils");
+exports.onCreateBabelConfig = ({ actions }) => {
+    actions.setBabelPreset({ name: 'babel-preset-gatsby', options: {} });
+};
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if (node.internal.type === 'MarkdownRemark') {

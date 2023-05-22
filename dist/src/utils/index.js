@@ -1,14 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isSrcMarkdown = exports.isBookSlug = exports.isFilmSlug = void 0;
+exports.isSrcMarkdown = exports.isBlogSlug = exports.isBookSlug = exports.isFilmSlug = void 0;
+function testSlug(test, slug) {
+    return RegExp('/' + test + '/').test(slug);
+}
 function isFilmSlug(slug) {
-    return /\/films\//.test(slug);
+    return testSlug('films', slug);
 }
 exports.isFilmSlug = isFilmSlug;
 function isBookSlug(slug) {
-    return /\/books\//.test(slug);
+    return testSlug('books', slug);
 }
 exports.isBookSlug = isBookSlug;
+function isBlogSlug(slug) {
+    return testSlug('blogs', slug);
+}
+exports.isBlogSlug = isBlogSlug;
 function isSrcMarkdown(slug) {
     return /\/markdown\//.test(slug);
 }

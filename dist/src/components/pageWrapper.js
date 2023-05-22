@@ -66,6 +66,7 @@ const Sidebar = styled_components_1.default(react_spring_1.animated.div) `
 `;
 const StyledLink = styled_components_1.default(gatsby_1.Link) `
   text-decoration: none;
+  text-align: center;
 `;
 const NavLink = styled_components_1.default(react_spring_1.animated(StyledLink)) `
   width: 80px;
@@ -114,18 +115,13 @@ const PageWrapper = ({ className, children }) => {
     });
     const listItems = [
         {
-            children: 'Contact',
-            key: 'contact1',
-            to: '/contact/',
+            children: 'Now',
+            key: 'now',
+            to: '/now',
         },
         {
             children: 'Contact',
-            key: 'contact2',
-            to: '/contact/',
-        },
-        {
-            children: 'Contact',
-            key: 'contact3',
+            key: 'contact',
             to: '/contact/',
         },
     ];
