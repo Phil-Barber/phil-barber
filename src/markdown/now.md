@@ -2,43 +2,37 @@
 _(This is [a now page](https://nownownow.com/about))_
 
 
-## Mindfulness
+## Infogrid
 
-The end of 2020 was really stressful for me. The Vaccine roll-out meant a whole
-load of new urgent work to be done plus putting together a roadmap for 2021.
-Long stressful hours meant I carried that stress with me when work finished.
+Infogrid is building modern solutions to improve the environmental impact of
+the built environment. I've predominantly been working on the Occupancy
+solution, serving meaningful aggregations of large datasets.
 
-My aim for this quarter is to retain the calm I cultivated over the Christmas 
-break. I've been trying to meditate twice daily, and am doing some form of 
-exercise every day (usually yoga).
+Infogrid has some fantastic employees and I feel very fortunate to work here. 
+I've been able to learn a tonne from those around me, most excitingly in domain
+driven design and data intensive applications.
 
-*Update* [2021-04-04] Have been using the Waking Up app for about 3 months now
-and I've found it invaluable. I'd highly recommend it.
+Recent projects include moving legacy data aggregations out of Python and into
+the database. We're also building a data pipeline to build data models using
+Snowflake and DBT, then consuming those models in Cube, a headless-BI tool.
 
-## Treepoints
-I'm on 4 days a week at Lantum and I'm using my 5th day to take a break from my
-manager schedule and get some much needed maker time at Treepoints.
+## Moving house
 
-Treepoints is a new business that aims to give people an affordable, convenient
-and rewarding way to offset their carbon.
+I'm currently in the middle of moving house which is always a challening period,
+a truism I'm just beginning to fully appreciate. It feels like the past 3 months
+I've had precious little headspace to do other things but it will all be worth it
+in the end... right?
 
 
-## Lantum
+## Nice
 
-Engineering Manager on one of two squads, responsible for delivery of high 
-quality features with unforgiving deadlines. It's all systems go for us at the
-moment to reach the start-up Mecca: product market fit.
+Enjoyed a terrific working holiday in Nice over the early May bank holiday with
+5 days work, 5 days play. A beautiful city with great access to other
+destinations in the Côte d'Azur.
 
-Currently hiring aggressively so if you know or yourself are a developer and 
-Lantum sounds interesting to you, hit me up!
-
-### More on Lantum
-Temporary staffing in the NHS is a [huge cost](https://www.gov.uk/government/news/clampdown-on-nhs-staffing-agency-costs) due to the crisis in available staff. Lantum aims to 
-reduce those costs drastically, as well as dragging healthcare institutions into 
-the future - replacing tedious pen and paper rotas an manual uploads with fully
-digital and seamless staff scheduling. 
-
+Drank lots of delicious wine, indulged in lots of cheese, and plentiful flakes
+of buttery pastry. I would reccomend **highly**.
 
 ---
 
-Updated 4th April 2021, Tonbridge UK
+Updated 22nd May 2023, Tonbridge UK
