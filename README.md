@@ -1,15 +1,6 @@
 # Hi There 🐙
 Welcome to my profile.
 
-This is the code behind my [personal website](https://www.phil-barber.uk), which
-inconveniently has the same name as my profile and so this document is the
-README for both.
-
-Started out as a 100 days of gatsby project, now just a general playground for me to try new things.
-
-I also have a shocking memory so I use the blog posts here as a way to remind my self what I've done with my time.
-
-
 [![Linkedin](https://img.shields.io/badge/LinkedIn-Phil%20Barber-blue?logo=Linkedin&logoColor=blue&labelColor=black)](https://www.linkedin.com/in/philip-barber-827581b1/)
 
 # Languages & Tools
@@ -27,13 +18,3 @@ I also have a shocking memory so I use the blog posts here as a way to remind my
 ![ESlint](https://img.shields.io/badge/-ESlint-000000?style=flat&logo=ESlint&labelColor=4B32C3)
 ![Python](https://img.shields.io/badge/-Python-000000?style=flat&logo=python&labelColor=inactive)
 ![Django](https://img.shields.io/badge/-Django-000000?style=flat&logo=django&labelColor=darkgreen)
-
-# Recent Posts
-This list updates automatically!
-<!-- recent posts start -->
-* [Hell Yeah Or No](http://phil-barber.uk/books/hell-yeah-or-no) - 29 Apr 2021
-* [Hiatus](http://phil-barber.uk/blogs/hiatus) - 01 Apr 2021
-* [The Dig](http://phil-barber.uk/films/the-dig) - 18 Feb 2021
-* [Managers Path](http://phil-barber.uk/books/managers-path) - 10 Feb 2021
-* [Captain Fantastic](http://phil-barber.uk/films/captain-fantastic) - 10 Feb 2021
-<!-- recent posts end -->
